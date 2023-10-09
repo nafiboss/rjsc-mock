@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/registration-approval-process.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="d-flex flex-row px-60 py-18 justify-content-between">
+        <div class="d-flex align-content-between">
+          <img
+            src="../../../src/images/govt.png"
+            class="rounded mx-auto d-block"
+            alt="nav govt logo"
+          />
+          <span class="d-flex ps-4 me-4 border-end"></span>
+          <img
+            src="../../../src/images/ebrs-logo.png"
+            class="rounded mx-auto d-block"
+            alt="nav erbs logo"
+          />
+        </div>
+        <div class="d-flex">
+          <div class="d-flex profile-img">
+            <img
+              src="../../../src/images/avatar.png"
+              class="rounded mx-auto d-block"
+              alt="nav erbs logo"
+            />
+          </div>
+          <div class="dropdown d-flex flex-column">
+            <button
+              class="btn btn-secondary dropdown-toggle font-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              MD. Reza Uddin
+            </button>
+
+            <ul class="dropdown-menu p-3">
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Password reset</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Signout</a>
+              </li>
+            </ul>
+            <span class="font-label text-secondary ps-2">Dealing officer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-gray">
+      <div class="row">
+        <div class="col-md-2 bg-white">
+          <div class="d-flex flex-column border-top p-4">
+            <ul class="list-inline" id="registration-left-menu-link">
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <img
+                    src="../../images/common/common-menu-icon.png"
+                    alt="left menu image"
+                  />
+                  <div class="text-primary">New Registration</div>
+                </div>
+                <div class="list-group pt-4 ps-3 new-registration-link">
+                  <a
+                    href="#"
+                    class="list-group-item list-group-item-action active border-0"
+                    aria-current="true"
+                    ><i class="fa-solid fa-circle fa-2xs"></i>
+
+                    Applications
+                  </a>
+
+                  <a
+                    href="./dealing-officer-history.html"
+                    class="list-group-item list-group-item-action border-0"
+                  >
+                    <i class="fa-solid fa-circle fa-2xs"></i>
+                    History</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <img
+                    src="../../images/common/common-menu-icon.png"
+                    alt="left menu image"
+                  />
+                  <div class="text-black">Return submission</div>
+                </div>
+                <div
+                  class="collapse pt-4 ps-4 new-registration-link"
+                  id="collapseExample"
+                >
+                  <ul class="list-group">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                      aria-current="true"
+                      ><i class="fa-solid fa-circle fa-2xs"></i>
+
+                      Submission one
+                    </a>
+
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <i class="fa-solid fa-circle fa-2xs"></i>
+                      Submission two</a
+                    >
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Name search</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Invoice</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Report</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a
+                    href="../dealing-officer/dealing-officer-portal.html"
+                    class="d-flex gap-3 text-black"
+                  >
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="menu-active">My portal</div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="d-flex p-4 w-100">
+            <div
+              class="w-60 bg-white custom-radius p-3 justify-content-between flex-column"
+            >
+              <div class="d-flex">
+                <div class="fs-20b">Your KPI</div>
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn btn-primary">
+                    Last month
+                  </button>
+                  <button type="button" class="btn border border-primary">
+                    Last week
+                  </button>
+                  <button type="button" class="btn border border-primary">
+                    Today
+                  </button>
+                </div>
+              </div>
+              <div class="d-flex py-4 justify-content-between">
+                <div
+                  class="d-flex light-green flex-column gap-4 p-5 align-items-center"
+                >
+                  <div class="font-label">Cases Accepted</div>
+                  <div class="fs-40-48-500">204</div>
+                  <div class="font-label text-success">+5%</div>
+                  <div class="font-label text-success">
+                    <img
+                      src="../../images/registration-process/graph-green.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="d-flex pink-bg flex-column gap-4 p-5 align-items-center"
+                >
+                  <div class="font-label">Cases Completed</div>
+                  <div class="fs-40-48-500">150</div>
+                  <div class="font-label text-success">-8%</div>
+                  <div class="font-label text-success">
+                    <img
+                      src="../../images/registration-process/graph-red.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="d-flex orange-bd flex-column gap-4 p-5 align-items-center"
+                >
+                  <div class="font-label">Cases Pending</div>
+                  <div class="fs-40-48-500">10</div>
+                  <div class="font-label text-success">-5%</div>
+                  <div class="font-label text-success">
+                    <img
+                      src="../../images/registration-process/graph-orange.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="">
+                <div class="d-flex border-top py-4">
+                  <div class="col-md-12">
+                    <table
+                      id="example"
+                      class="table table-striped table-bordered"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Actions Overview</th>
+                          <th>Registration Type</th>
+                          <th>Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Foreword to examiner</td>
+                          <td>Return submission</td>
+                          <td>03:05 PM</td>
+                        </tr>
+                        <tr>
+                          <td>Foreword to examiner</td>
+                          <td>Return submission</td>
+                          <td>03:05 PM</td>
+                        </tr>
+                        <tr>
+                          <td>Foreword to examiner</td>
+                          <td>Return submission</td>
+                          <td>03:05 PM</td>
+                        </tr>
+                        <tr>
+                          <td>Foreword to examiner</td>
+                          <td>Return submission</td>
+                          <td>03:05 PM</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-40 bg-white mx-3">
+              <div class="">
+                <img
+                  src="../../images/registration-process/calendar.png"
+                  alt="calendar"
+                />
+              </div>
+
+              <div class="d-flex flex-column notification">
+                <div class="d-flex gap-2 red-bd p-5 mb-2 rounded">
+                  <div class="">
+                    <i class="fa-regular fa-message" style="color: #1f9aa2"></i>
+                  </div>
+                  <div class="d-flex gap-2 flex-column">
+                    <div class="font-label">1 new message from RJSC</div>
+                    <div class="cart-notification">
+                      Company Registration - Khan Ceramics
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 header-background p-5 mb-2 rounded">
+                  <div class="">
+                    <i
+                      class="fa-solid fa-bangladeshi-taka-sign"
+                      style="color: #a8de1f"
+                    ></i>
+                  </div>
+                  <div class="d-flex gap-2 flex-column">
+                    <div class="font-label">Invoice Payment</div>
+                    <div class="cart-notification">
+                      Company Registration Payment Accepted
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 gray-background p-5 mb-2 rounded">
+                  <div class="">
+                    <i class="fa-regular fa-message" style="color: #1f9aa2"></i>
+                  </div>
+                  <div class="d-flex gap-2 flex-column">
+                    <div class="font-label">1 new message from RJSC</div>
+                    <div class="cart-notification">
+                      Annual Return Submission - Khan Ceramics
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        new DataTable("#example");
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+  </body>
+</html>

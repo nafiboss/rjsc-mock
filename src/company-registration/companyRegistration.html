@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  for Low bandwidth, content might be slow to load, here a spinner will appear  -->
+    <style>
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(/images/loading-icon.gif) center no-repeat #fff;
+            background-size: 60px 60px;
+            background-color: #13121296;
+            opacity: 0.90;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/lib/fontawesome.min.css">
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="/css/custom/common.css">
+
+    
+    <link rel="stylesheet" href="/css/lib/datatables.min.css">
+    <link rel="stylesheet" href="/css/lib/responsive.dataTables.min.css">
+
+    
+    <link rel="stylesheet" href="/css/lib/select2.min.css">
+    <link rel="stylesheet" href="/css/custom/registration.css">
+    <link rel="stylesheet" href="/css/custom/form.css">
+</head>
+<head>
+    <link rel="stylesheet" href="/css/custom/style.css">
+</head>
+<body>
+<div class="flushMsgDiv">
+    
+    
+    
+    
+    
+</div>
+
+<!-- To make a feel that, a loader is loading -->
+<div class="se-pre-con"></div>
+
+<div>
+    <div class="container-fluid bg-white">
+        <div class="d-flex flex-row px-60 py-10 justify-content-between">
+            <div class="d-flex align-content-between">
+                <img
+                        src="/images/govt.png"
+                        class="rounded mx-auto d-block"
+                        alt="nav govt logo"
+                />
+                <span class="d-flex ps-4 me-4 border-end"></span>
+                <img
+                        src="/images/ebrs-logo.png"
+                        class="rounded mx-auto d-block"
+                        alt="nav erbs logo"
+                />
+            </div>
+            <div class="d-flex">
+                <div class="d-flex profile-img">
+                    <img
+                            src="/images/avatar.png"
+                            class="rounded mx-auto d-block"
+                            alt="nav erbs logo"
+                    />
+                </div>
+                <div class="dropdown">
+                    <button
+                            class="btn btn-secondary dropdown-toggle font-btn"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Profile Name
+                    </button>
+                    <ul class="dropdown-menu p-3">
+                        <li class="d-flex align-items-center">
+                            <img
+                                    src="/images/icon.png"
+                                    class="rounded mx-auto d-block setting-icon"
+                                    alt="nav erbs logo"
+                            />
+                            <a class="dropdown-item" href="#">My profile</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img
+                                    src="/images/icon.png"
+                                    class="rounded mx-auto d-block setting-icon"
+                                    alt="nav erbs logo"
+                            />
+                            <a class="dropdown-item" href="#">Password reset</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img
+                                    src="/images/icon.png"
+                                    class="rounded mx-auto d-block setting-icon"
+                                    alt="nav erbs logo"
+                            />
+                            <a class="dropdown-item" href="#">Signout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="container-fluid dark-blue">
+        <div class="d-flex px-60 py-12 justify-content-between">
+            <div class="d-flex float-left">
+                <div class="d-flex border border-white rounded px-4 py-2">
+                    <a
+                            href="/mock-html/src/dashboard/user-dashboard.html"
+                            class="underline-none d-flex justify-content-center gap-2"
+                    >
+                        <div class="d-flex align-items-center">
+                            <img
+                                    src="../../src/images/registration/arrow.png"
+                                    class="arrow-map"
+                                    alt="arrow"
+                            />
+                        </div>
+                        <span class="d-flex font-label text-white align-items-center"
+                        >Back to Home</span
+                        >
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+          <span class="top-header text-white align-items-center d-flex"
+          >Registration Application</span
+          >
+            </div>
+            <div class="d-flex float-right gap-2">
+                <div class="d-flex">
+                    <div class="progress blue">
+              <span class="progress-left">
+                <span class="progress-bar"></span>
+              </span>
+                        <span class="progress-right">
+                <span class="progress-bar"></span>
+              </span>
+                        <div class="progress-value">20/30</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+            <span class="d-flex fs-6 text-white align-items-center"
+            >Completed 20 out of 30 fields.</span
+            >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-gray">
+        <form id="company-registration" class="">
+        <div class="row main-content">
+            <div class="col-md-2 col-xl-2 stepProgressLeftPart">
+
+            </div>
+            <div class="col-md-10 col-xl-10 pl-5 stepProgressRightPart">
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+    <div class="container-fluid align-items-end bg-light">
+        <div class="d-flex">
+            <img src="../images/footer-img.png" class="rounded mx-auto d-block w-100" alt="nav bottom image"/>
+        </div>
+    </div>
+
+
+
+<!-- Common js block -->
+
+    <script src="/js/lib/jquery-3.7.0.min.js"></script>
+    <script src="/js/lib/jquery-ui.min.js"></script>
+    <script src="/js/lib/bootstrap.min.js"></script>
+    <script src="/js/lib/popper.min.js"></script>
+    <script src="/js/custom/obrs.js"></script>
+
+    <!--  For Low bandwidth, content might be slow to load, a spinner will appear at the top of
+          the page and here we will remove that spinner
+    -->
+    <script type="text/javascript">
+    $(document).ready(function () {
+        console.log("======== All contents were loaded successfully ============");
+        $(document).find("div.se-pre-con").fadeOut("slow");
+
+        // Click event to remove flush msg
+        $(document).on('click', ".removeFlushMsg", function(){
+            $(this).closest('div.alert').remove();
+        });
+
+        // Auto fade out flush msg
+        Obrs.APP.createFlushMsgAutoFadeOut();
+    });
+</script>
+
+
+
+<!-- Custom js block -->
+
+    
+    <script src="/js/lib/datatables.min.js"></script>
+    <script src="/js/lib/dataTables.pipeline.js"></script>
+    <script src="/js/lib/dataTables.responsive.min.js"></script>
+    <script src="/js/lib/dataTables.fixedHeader.min.js"></script>
+    <script src="/js/lib/dataTables.bootstrap5.min.js"></script>
+
+    <script type="text/javascript" src="/js/lib/ckeditor.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="/js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="/js/lib/bootbox.js"></script>
+    <script type="text/javascript" src="/js/lib/select2.min.js"></script>
+    <script type="text/javascript" src="/js/widget/showMoreLessWidget.js"></script>
+    <script type="text/javascript" src="/js/companyForms/BaseForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/EntityTypeForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/CompanyNameForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/AddressInfoForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/BusinessObjectForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/BusinessDetailsForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/QualifiedSharesForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/ShareHolderDetailsForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/ShareHolderPositionForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/MoaForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/AoaForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/PreviewForm.js"></script>
+    <script type="text/javascript" src="/js/companyForms/WitnessForm.js"></script>
+    <script type="text/javascript" src="/js/widget/companyRegistrationWidget.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        let obrs = $("body").companyRegistrationWidget({
+            message:{
+                dataTableConfig: {
+                    language: {
+                        processing: 'Processing...',
+                        lengthMenu: 'Show _MENU_ entries',
+                        zeroRecords: 'No matching records found',
+                        info: 'Showing _START_ to _END_ of _TOTAL_ entries',
+                        infoEmpty: 'Showing 0 to 0 of 0 entries',
+                        infoFiltered: '(filtered from _MAX_ total entries)',
+                        search: 'Search:',
+                        paginate: {
+                            first: 'First',
+                            previous: 'Previous',
+                            next: 'Next',
+                            last: 'Last'
+                        }
+                    }
+                }
+            }
+        });
+
+        $(window).on('load', function(){
+           const queryString = window.location.search;
+           const urlParams = new URLSearchParams(queryString);
+
+            if(urlParams.get("params") == "withName") {
+                $(document).find('.carousel').carousel('next');
+
+                setTimeout(function () {
+                    $(document).find('.carousel').carousel('next');
+                }, 700);
+            }
+        });
+
+        $(document).on('click', '.nextBtn', function(){
+            console.log($('.carousel-item.active').data('formCode'));
+            if($('.carousel-item.active').data('formCode') == "PREVIEW_FORM") {
+                window.location.pathname = "/mock-html/src/dashboard/my-application.html";
+            }
+        });
+
+        $(document).on('click', '.btn-success', function(){
+          $('div.remove').remove();
+
+          if($($('.carousel-item.active .companyRegistrationForm .reg-form-input')[0]).val().includes("nafi")) {
+            $(this).parent().append("<div id='availability' class='remove font-label text-success fw-bold'><br> <i class='fa-solid fa-check' style='color: #198754'></i> Well Done, Perfect Name.</div>");
+          } else {
+            $(this).parent().append("<div id='availability' class='remove font-label text-danger fw-bold'> <br> <i class='fa-solid fa-close' style='color: red'></i> Name not available, but you can still apply for review</div>");
+            $(this).parent().append("<div class='remove'> <br><a href='/mock-html/src/dashboard/clearance-application.html?params=review' class='btn btn-primary w-100 font-label'>Apply for review</a></div>");
+          }
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/registration-approval-process.css" />
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="d-flex flex-row px-60 py-18 justify-content-between">
+        <div class="d-flex align-content-between">
+          <img
+            src="../../../src/images/govt.png"
+            class="rounded mx-auto d-block"
+            alt="nav govt logo"
+          />
+          <span class="d-flex ps-4 me-4 border-end"></span>
+          <img
+            src="../../../src/images/ebrs-logo.png"
+            class="rounded mx-auto d-block"
+            alt="nav erbs logo"
+          />
+        </div>
+        <div class="d-flex">
+          <div class="d-flex profile-img">
+            <img
+              src="../../../src/images/avatar.png"
+              class="rounded mx-auto d-block"
+              alt="nav erbs logo"
+            />
+          </div>
+          <div class="dropdown d-flex flex-column">
+            <button
+              class="btn btn-secondary dropdown-toggle font-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              MD. Reza Uddin
+            </button>
+
+            <ul class="dropdown-menu p-3">
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Password reset</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Signout</a>
+              </li>
+            </ul>
+            <span class="font-label text-secondary ps-2">Dealing officer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-gray">
+      <div class="row custom-radius bg-white m-4">
+        <div class="col-md-8">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item w-100">
+              <h2 class="accordion-header w-100" id="headingOne">
+                <button
+                  class="accordion-button d-flex"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  <span class="fs-24-38-500">A. Business type information</span>
+                  <span class="font-label"
+                    >(as of Memorandum and Articles of Association,
+                    Form-VI)</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <div class="d-flex flex-column gap-4 py-4">
+                    <div class="fs-16-24-700 header-background px-2">
+                      a.1 Basic Information
+                    </div>
+
+                    <div class="row px-2">
+                      <div class="font-label col">1. Name</div>
+                      <div class="font-label col">ইদ্রিস মোল্লা</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">2. Father's Name</div>
+                      <div class="font-label col">করিম মোল্লা</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">3. Mother's Name</div>
+                      <div class="font-label col">জোবেদা বেগম</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">3. NID Details</div>
+                      <div class="font-label col">4848745615</div>
+
+                      <div
+                        class="form-check col d-flex justify-content-end gap-5"
+                      >
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">4. Date of Birth</div>
+                      <div class="font-label col">18/01/1966</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">5. Nationality</div>
+                      <div class="font-label col">Bangladeshi</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">6. Email</div>
+                      <div class="font-label col">nusrat@gmail.com</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">7. Phone/Mobile</div>
+                      <div class="font-label col">+880 123 456 7897</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">
+                        11. Original Nationality if different
+                      </div>
+                      <div class="font-label col">N/A</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column gap-4 mb-4">
+                    <div class="fs-16-24-700 header-background px-2">
+                      Usual Residential Address*
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">1. District</div>
+                      <div class="font-label col">Dhaka</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">2. Division</div>
+                      <div class="font-label col">Dhaka</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">3. Upojela/Thana</div>
+                      <div class="font-label col">Mohakhali</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column gap-4">
+                    <div class="fs-16-24-700 header-background px-2">
+                      Permanent Address*
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">1. District</div>
+                      <div class="font-label col">Dhaka</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">2. Division</div>
+                      <div class="font-label col">Dhaka</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="font-label col">3. Upojela/Thana</div>
+                      <div class="font-label col">Mohakhali</div>
+                      <div class="form-check col d-flex justify-content-end">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex border border-1 custom-radius flex-column">
+            <div class="fs-24-38-500 main-body-color p-2">
+              Data retrieved from the NID Server.
+            </div>
+            <div class="d-flex flex-column gap-4 p-4">
+              <div class="fs-16-24-700 main-body-color p-2">NID Info</div>
+              <div class="d-flex justify-content-between">
+                <span class="font-label text-secondary">National ID </span>
+                <span class="font-label text-body">1564654878</span>
+              </div>
+              <div class="d-flex">
+                <img
+                  src="../../images/registration-process/nid.png"
+                  alt="nid photo"
+                />
+              </div>
+              <div class="d-flex justify-content-between">
+                <span class="font-label text-secondary">Signature</span>
+                <span class="font-label text-body">1564654878</span>
+              </div>
+            </div>
+            <div class="d-flex flex-column gap-4 p-4">
+              <div class="fs-16-24-700 main-body-color p-2">TIN Info</div>
+              <div
+                class="d-flex justify-content-between border-bottom border-1 pb-2"
+              >
+                <span class="font-label text-secondary">TIN Number</span>
+                <span class="font-label text-body">1564654878</span>
+              </div>
+              <div
+                class="d-flex justify-content-between border-bottom border-1 pb-2"
+              >
+                <span class="font-label text-secondary">Previous TIN </span>
+                <span class="font-label text-body">1564654878</span>
+              </div>
+              <div
+                class="d-flex justify-content-between border-bottom border-1 pb-2"
+              >
+                <span class="font-label text-secondary">Status</span>
+                <span class="font-label text-body"
+                  >Artificial Juridical Person (NGO)</span
+                >
+              </div>
+              <div class="d-flex">
+                <img
+                  src="../../images/registration-process/signature.png"
+                  alt="nid photo"
+                />
+              </div>
+              <div
+                class="d-flex justify-content-between border-bottom border-1 pb-2"
+              >
+                <span class="font-label text-secondary">Signature</span>
+                <span class="font-label text-body">1564654878</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex bg-white p-4 w-100 justify-content-between">
+        <div class="d-flex w-30">
+          <a
+            href="./task-dealing.html"
+            class="d-flex close-btn-background py-2 px-3 gap-2 align-items-center custom-radius"
+          >
+            <i class="fa-solid fa-arrow-left" style="color: #000"></i>
+            <button type="button" class="font-label border-0 bg-transparent">
+              Go back
+            </button>
+          </a>
+        </div>
+
+        <div class="w-70 justify-content-end d-flex gap-2">
+          <button
+            type="button"
+            class="btn border border-primary text-white bg-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Approve
+          </button>
+          <a
+            href="./application-list.html"
+            type="button"
+            class="btn text-black close-btn-background"
+          >
+            Reject
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header dark-green">
+            <div class="d-flex flex-column">
+              <h5 class="modal-title text-white" id="exampleModalLabel">
+                You are about to approve the following submission.
+              </h5>
+              <span class="font-label text-white"
+                >Review details before proceeding.</span
+              >
+            </div>
+            <button
+              type="button"
+              class="btn-close text-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body container p-5">
+            <div class="row border border-1 custom-radius p-5">
+              <div class="col-md-6">
+                <div class="d-flex flex-column gap-4">
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      1. Submission No:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      2. Submission Date:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">3. Client Name:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">4. Entity type:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      5. Request type:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">5. Notes:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      5. Email advice:
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column gap-4">
+                  <div class="d-flex">
+                    <div class="font-label">20225655877</div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="font-label">18/01/1997</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label">Mayer doa biriani</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label">Private Company</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label">Registration</div>
+                  </div>
+                  <div class="d-flex">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Type here"
+                    />
+                  </div>
+                  <div class="d-flex">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Type here"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 main-body-color px-2 py-3 mt-3">
+                <div class="d-flex flex-column">
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Please confirm the submission no.</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Type the number"
+                  />
+                </div>
+                <div class="d-flex justify-content-end gap-2 pt-4">
+                  <button type="button" class="btn close-btn-background">
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">Confirm</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

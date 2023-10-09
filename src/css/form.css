@@ -1,0 +1,43 @@
+.top-header {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 33.6px;
+}
+.arrow-map {
+  height: 8px;
+  width: 10px;
+}
+
+.list-group-item {
+  border: transparent;
+  background-color: transparent;
+}
+.border-color {
+  border: 1px solid #e4e7ec;
+}
+.btn-outline-secondary {
+  border: 1px solid #e4e7ec;
+}
+
+.bigger-label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.all-label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.reg-form-input {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  border: 1px solid #e4e7ec;
+}
+
+.form-control:focus {
+  border-color: #ff0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}

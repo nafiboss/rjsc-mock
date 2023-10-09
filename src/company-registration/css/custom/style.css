@@ -1,0 +1,268 @@
+.top-menu{
+  padding: 0.15rem;
+}
+.error{
+  color: #db0000b8 !important;
+  font-weight: 500 !important;
+}
+label.error {
+  margin-top: 3px;
+}
+input.error, select.error, textarea.error{
+  border: 1px solid #db0000b8 !important;
+}
+input.valid, select.valid, textarea.valid{
+  border: 1px solid rgba(29, 199, 118, 0.91) !important;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.sign-header {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 48px;
+}
+.w-60{
+  width: 60% !important;
+}
+.w-55{
+  width: 55% !important;
+}
+.otpInputTxt{
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.otpInputTxt:focus{
+  border-color: mediumseagreen;
+  box-shadow: 3px 3px rgba(0, 255, 114, 0.89);
+}
+.countDownTimeLabel{
+  font-weight: 600;
+}
+.flushMsgDiv{
+  width: 60%;
+  position: absolute;
+  right: 12px;
+  top: 10px;
+}
+.flushMsgDiv .alert {
+  position: relative;
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 10px 10px #868b8b59;
+  z-index: 1024;
+}
+
+.flushMsgDiv .alert-danger {
+  color: #842029;
+  border-color: #ec8890;
+  box-shadow: 10px 10px #f8d7da7a;
+}
+
+.flushMsgDiv .alert-success {
+  color: #0f5132;
+  border-color: #72d9ae;
+  box-shadow: 10px 10px #d1e7dd75;
+}
+.flushMsgDiv .alert-warning {
+  border-color: rgba(232, 187, 41, 0.46);;
+  box-shadow: 10px 10px rgba(245, 224, 158, 0.46);
+}
+.flushMsgDiv .alert-info {
+  border-color: #56ddf8;
+  box-shadow: 10px 10px rgba(182, 239, 251, 0.46);
+}
+.flushMsgDiv .fa-circle-check, .flushMsgDiv .fa-circle-info, .flushMsgDiv .fa-triangle-exclamation{
+  font-size: 20px;
+  padding-right: 10px;
+}
+.flushMsgDiv .fa-xmark{
+  font-size: 20px;
+}
+.errorMsg{
+  color: red;
+  text-align: center;
+  background-color: #ff000014;
+  padding: 8px;
+  border-radius: 5px;
+}
+.successMsg{
+  color: #00ab55;
+  text-align: center;
+  background-color: rgba(160, 236, 197, 0.25);
+  padding: 8px;
+  border-radius: 5px;
+}
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: #008000;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.valid:before {
+  color: #008000;
+  position: relative;
+  left: -10px;
+  content: "✔";
+  font-size: 20px;
+}
+.invalid {
+  color: #da3f3f;
+}
+.invalid:before {
+  position: relative;
+  display: inline-block;
+  left: -10px;
+  content: '';
+  width: 9px;
+  height: 9px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  background-color: #4848487a;
+  opacity: 0.9;
+  top: -2px;
+}
+.light-blue-bg{
+  background-color: #bce9ff38;
+}
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.top-header {
+  font-size: 25px;
+}
+.clickable-steps{
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.clickable-steps:hover{
+  background-color: rgb(197, 252, 241);
+  border-radius: 6px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.step-success{
+  color: #11880f !important;
+}
+.step-running{
+  color: #ffa500 !important;
+}
+.emptyListMsgDiv{
+  padding: 10px;
+  background-color: #dddddd40;
+  font-weight: 600;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.shareHolderDetailsForm{
+  border-radius: 7px;
+  border: 1px solid #dddddd;
+}
+.modal-btn{
+  border-width: 0px;
+  position: absolute;
+  right: 15px;
+  background-color: white;
+  font-size: 25px;
+}
+.bootbox-close-button{
+   position: absolute;
+   right: 10px;
+   border: 0;
+   background-color: white;
+   font-size: 25px;
+   top: 7px;
+ }
+.table-hover tbody tr:hover{
+  background-color: #F0F4FF!important;
+}
+.moaClauseTableWrapperDiv{
+  height: 370px;
+  overflow-y: scroll;
+}
+.moaClauseTable thead tr th{
+  background-color: #031b4d;
+  color: white;
+
+}
+.moa-class-count-info{
+  padding: 5px;
+  margin-boittom: 10px;
+  color: blue;
+}
+.font-weight-bold{
+  font-weight: bold;
+}
+.morecontent span {
+  display: none;
+}
+.morelink {
+  display: block;
+}
+.moaClauseTable tbody tr.active{
+  background-color: #F0F4FF!important;
+}
+.text-underline{
+  text-decoration: underline;
+}
+.text-align-center{
+  text-align: center;
+}
+.moa-preview-table tr td:first-child{
+  width: 30px;
+  vertical-align: top;
+}
+.moa-preview-table tr td:last-child{
+  padding-bottom: 10px;
+}
+
+.light-blue-bg{
+  background-color: #bce9ff38;
+}
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.top-header {
+  font-size: 25px;
+}
+.clickable-steps{
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.clickable-steps:hover{
+  background-color: rgb(197, 252, 241);
+  border-radius: 6px;
+}
+.pb-16 {
+  padding-bottom: 16px;
+}
+.step-success{
+  color: #11880f !important;
+}
+.step-running{
+  color: #ffa500 !important;
+}
+.floatable-bottom-btn{
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  padding-right: 55px;
+}
+.moaImg{
+
+}

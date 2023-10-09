@@ -1,0 +1,56 @@
+#new-registration-link {
+}
+#registration-left-menu-link li {
+  padding: 13px 0;
+}
+.registration-left-menu-link li {
+  padding: 13px 0;
+}
+.new-registration-link .fa-circle {
+  padding-right: 4px;
+}
+.new-registration-link .list-group-item.active {
+  background-color: transparent;
+  color: blue;
+}
+.action-btn {
+  width: 120px;
+}
+.table-bordered > :not(caption) > * {
+  border: none;
+}
+.table > :not(:last-child) > :last-child > * {
+  border: none;
+}
+.table-bordered > :not(caption) > * > * {
+  border: none;
+  box-shadow: none;
+}
+.table > thead {
+  background-color: rgba(240, 244, 255, 1);
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: rgba(246, 246, 249, 1);
+}
+.accordion-button {
+  color: black;
+}
+.btn-width {
+  width: 130px;
+}
+.bg-verified {
+  background-color: rgba(225, 255, 234, 1);
+}
+.black-text {
+  color: black;
+}
+.menu-active {
+  color: rgba(25, 82, 244, 1);
+}
+
+.view-btn-width {
+  width: 110px;
+}

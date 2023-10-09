@@ -1,0 +1,234 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* custom gap starts */
+.px-60 {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.py-60-40 {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.py-18 {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.p-36 {
+  padding: 36px;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pb-28 {
+  padding-bottom: 28px;
+}
+
+.gap-28 {
+  padding-left: 28px;
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.gap-24 {
+  padding: 24px;
+}
+.gap-y-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.p-32 {
+  padding: 32px;
+}
+.p-15 {
+  padding: 15px;
+}
+.pt-gap {
+  margin-top: 1.125rem;
+}
+/* custom gap ends */
+/* color starts */
+.gray {
+  color: #6c757d;
+}
+.gray-bg {
+  background-color: #f2f4f7;
+}
+.gray-bg-200 {
+  background-color: #e9ecef;
+}
+.red {
+  color: red;
+}
+.dark-blue {
+  color: #031b4d;
+}
+.dark-blue-text {
+  color: #031b4d;
+}
+.dark-black-text {
+  color: #212529;
+  opacity: 75%;
+}
+.dark-black {
+  color: #212529;
+}
+.green-opacity {
+  color: #146c43;
+}
+.dark-blue {
+  background-color: #031b4d;
+}
+.red-bd {
+  background: rgba(255, 227, 230, 1);
+}
+.dark-red-bg {
+  background-color: rgba(220, 53, 69, 1);
+}
+.text-red {
+  color: rgba(176, 42, 55, 1);
+}
+/* color ends */
+/* fonts starts */
+
+.header {
+  font-size: 40px;
+  font-weight: 500;
+}
+.sub-header {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+.font-label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.error-font {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #dc3545;
+}
+
+.font-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #0d6efd;
+}
+.submit-btn-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+.plc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #5b5b5b;
+  opacity: 1;
+}
+.fs-20b {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* fonts ends */
+
+/* custom width starts */
+
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.fs-20b {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* fonts ends */
+
+/* custom width starts */
+
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-30 {
+  width: 30%;
+.w-30 {
+  width: 30%;
+}
+.w-30 {
+  width: 30%;
+}
+.w-70 {
+  width: 70%;
+}
+/* custom width ends */
+.btn-secondary {
+  background-color: transparent;
+  border: none;
+}
+.profile-img {
+  height: 40px;
+  width: 40px;
+}
+.setting-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.list-png {
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+}
+
+.footer {
+  height: 56px;
+}
+a {
+  text-decoration: none;
+}
+/* fonts ends */
+.main-body-color {
+  background-color: rgba(246, 246, 249, 1);
+}
+.border-color {
+  border: 1px solid rgba(199, 203, 207, 1);
+}
+.custom-radius {
+  border-radius: 10px;
+}
+.py-1 {
+  padding-top: 1.2rem!important;
+  padding-bottom: 1.2rem!important;
+}

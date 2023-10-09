@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="d-flex flex-row px-60 py-18 justify-content-between">
+        <div class="d-flex align-content-between">
+          <img
+            src="../images/govt.png"
+            class="rounded mx-auto d-block"
+            alt="nav govt logo"
+          />
+          <span class="d-flex ps-4 me-4 border-end"></span>
+          <img
+            src="../images/ebrs-logo.png"
+            class="rounded mx-auto d-block"
+            alt="nav erbs logo"
+          />
+        </div>
+        <div class="d-flex">
+          <label
+            class="form-check-label pe-3 fs-5 fw-normal"
+            for="flexSwitchCheckDefault"
+            >English</label
+          >
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
+            />
+            <label
+              class="form-check-label fs-5 fw-normal"
+              for="flexSwitchCheckDefault"
+              >বাংলা</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light py-60-40">
+      <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column">
+          <div class="d-flex flex-column mb-24">
+            <div class="header d-flex pb-3 justify-content-center">
+              Apply a Name for Your Company
+            </div>
+          </div>
+
+          <div class="d-flex flex-column bg-white p-36">
+            <form class="d-flex flex-column">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mb-3 col">
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label font-label"
+                      >Select Company Type</label
+                    >
+                    <select
+                      class="form-select plc reg-form-input form-control"
+                      aria-label="Default select example"
+                    >
+                      <option selected class="plc">Choose</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label font-label"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control plc"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label font-label"
+                    >Company Name in Bangla</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control plc"
+                    aria-describedby="emailHelp"
+                    placeholder="বাংলায় নাম লিখুন"
+                  />
+                </div>
+              </div>
+              <div class="row py-4">
+                <div class="col-md-6 d-flex align-items-center gap-2 pb-3">
+                  <i class="fa-solid fa-check" style="color: #198754"></i>
+                  <div
+                    id="availability"
+                    class="font-label text-success fw-bold"
+                  >
+                    Well Done, Perfect Name.
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <button
+                    type="button"
+                    class="btn btn-primary w-100 font-label"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label font-label"
+                    >Owner NID</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control plc"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your NID"
+                  />
+                </div>
+                <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label font-label"
+                    >Owner Phone</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control plc"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-12">
+                  <button
+                    type="button"
+                    class="btn btn-primary w-100 font-label"
+                  >
+                    Apply for Review
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid align-items-end bg-light">
+      <div class="d-flex">
+        <img
+          src="../images/footer-img.png"
+          class="rounded mx-auto d-block w-100"
+          alt="nav bottom image"
+        />
+      </div>
+    </div>
+  </body>
+</html>
