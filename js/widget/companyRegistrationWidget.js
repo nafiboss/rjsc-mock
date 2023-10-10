@@ -43,7 +43,7 @@ $.widget("obrs.companyRegistrationWidget", {
                 "itemList": [
                     {
                         "code": "COMPANY_NAME_FORM",
-                        "header": "a.1 Entity Name",
+                        "header": "a.1 Company Name",
                         "question": "What would be your company name?"
                     },
                     {

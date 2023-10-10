@@ -29,11 +29,11 @@ class CompanyNameForm extends BaseForm {
     html += '<div class="row p-4">'
         + '     <div class="col-md-6">'
         + '        <div class="d-flex flex-column mb-4">'
-        + '           <label class="form-label font-label">1. Entity name (English) <span class="red">*</span></label>'
+        + '           <label class="form-label font-label">1. Company name (English) <span class="red">*</span></label>'
         + '           <input id="entityName" class="plc reg-form-input form-control"/>'
         + '        </div>'
         + '        <div class="d-flex flex-column w-100 mb-4">'
-        + '           <label class="form-label font-label">2. Entity name (Bangla) <span class="red">*</span></label>'
+        + '           <label class="form-label font-label">2. Company name (Bangla) <span class="red">*</span></label>'
         + '           <input class="plc reg-form-input form-control"/>'
         + '         </div>'
         + '         <div class="d-flex flex-column w-100 mb-4">'
@@ -67,9 +67,4 @@ class CompanyNameForm extends BaseForm {
       'companyNameBn': ''
     }
   }
-
-  $(document).on('click', '.btn-success', function(){
-        console.log($('#entityName').val());
-  });
-
 }
