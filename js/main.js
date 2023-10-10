@@ -1,4 +1,5 @@
-window.urlPathPrefix = '';
+window.urlPathPrefix = window.location.pathname.includes('rjsc-mock') ? '/rjsc-mock': '';
+
 $(document).ready(function () {
   var current_fs, next_fs, previous_fs; //fieldsets
   var opacity;
