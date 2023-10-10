@@ -22,6 +22,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/main.js"></script>
   </head>
   <body>
     <div class="container-fluid bg-white">
@@ -166,11 +167,11 @@
           let email = $('#email').val();
           console.log(email);
           if(email.includes("obrs")) {
-            window.location.pathname = "/mock-html/src/dashboard/user-dashboard.html";
+            window.location.pathname = window.urlPathPrefix + "/dashboard/user-dashboard.html";
           } else if (email.includes("do")) {
-            window.location.pathname = "/mock-html/src/company-registration-approval-process/dealing-officer/dealing-officer-application-list.html";
+            window.location.pathname = window.urlPathPrefix + "/company-registration-approval-process/dealing-officer/dealing-officer-application-list.html";
           } else if (email.includes("ar")) {
-            window.location.pathname = "mock-html/src/company-registration-approval-process/AR/application-list.html";
+            window.location.pathname = window.urlPathPrefix + "/company-registration-approval-process/AR/application-list.html";
           }
         });
       });
