@@ -1,10 +1,13 @@
 class EntityTypeForm extends BaseForm {
   entityTypeList = {};
+  liabilityTypeList = {};
+  moaLiabilityName = 'moaLiabilitySelect';
 
-  constructor(entityTypeList) {
+  constructor(entityTypeList, liabilityTypeList) {
     super();
     console.log("SMNLOG :: Constructor : EntityTypeForm");
     this.entityTypeList = entityTypeList;
+    this.liabilityTypeList = liabilityTypeList;
   }
 
   getFormData(){
@@ -28,6 +31,14 @@ class EntityTypeForm extends BaseForm {
         + '           <div class="entity"> Entity type is a businesss legal structure, like a corporation or partnership, affecting liability and taxes.</div>'
         + '            </div>'
         + '         </div>'
+        + '          <div class="col-md-6">'
+        + '             <br/>'
+        + '             <div class="d-flex flex-column w-100">'
+        + '                 <label class="form-label font-label">2. Liability Type<span class="red">*</span></label>'
+        +                   Obrs.APP.getCommonSelectBox(this.liabilityTypeList, this.moaLiabilityName, "11")
+        + '             </div>'
+        + '         </div>'
+
         + '    </div>'
         + '</div>';
   }

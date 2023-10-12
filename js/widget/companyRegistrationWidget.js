@@ -145,6 +145,7 @@ $.widget("obrs.companyRegistrationWidget", {
         var self = this;
         Obrs.APP.startLoading();
         $.get('./getCommonData.json', {}, function (result) {
+            console.log("Result is :: " + result.liabilityTypeList);
             self.data.masterData = result;
         }).then(function(){
             if (typeof callbackFn == 'function') {
@@ -179,7 +180,8 @@ $.widget("obrs.companyRegistrationWidget", {
     getFormObject: function(parentObject, stepObject){
         var self = this;
         if(stepObject.code === 'ENTITY_TYPE_FORM'){
-            return new EntityTypeForm(self.data.masterData.companyTypeList);
+            console.log(self.data.masterData.liabilityTypeList);
+            return new EntityTypeForm(self.data.masterData.companyTypeList, self.data.masterData.liabilityTypeList);
         }else if(stepObject.code === 'COMPANY_NAME_FORM'){
             return new CompanyNameForm(parentObject.header, stepObject.header);
         }else if(stepObject.code === 'ADDRESS_FORM'){

@@ -5,9 +5,7 @@ class BusinessDetailsForm extends BaseForm {
   authCapitalClassName = 'authCapital';
   noOfShareClassName = 'noOfShare';
   valueOfEachShareClassName = 'noOfShare';
-  moaLiabilityName = 'moaLiabilitySelect';
-
-
+  
   constructor(header, subHeader) {
     super();
     console.log("SMNLOG :: Constructor : BusinessDetailsForm");
@@ -47,7 +45,7 @@ class BusinessDetailsForm extends BaseForm {
         + '                 <input type="email" class="plc reg-form-input form-control" placeholder="Value of each share "/>'
         + '             </div>'
         + '         </div>'
-        +'          <div class="col-md-6">'
+        + '          <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
         + '                 <label class="form-label font-label">6. MOA Liability <span class="red">*</span></label>'
         +                   Obrs.APP.getCommonSelectBox([], this.moaLiabilityName, '')
