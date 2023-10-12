@@ -19,5 +19,8 @@
     ],
     "moaSectionList":[
         {"id":1,"name":"Agriculture, forestry and fishing","nameBn":""},{"id":2,"name":"Mining and quarrying","nameBn":""},{"id":3,"name":"Manufacturing","nameBn":""},{"id":4,"name":"Electricity, gas, steam and Air conditioning Supply","nameBn":""},{"id":5,"name":"Water Supply; Sewerage; Waste Management and remediation activities","nameBn":""},{"id":6,"name":"Construction","nameBn":""},{"id":7,"name":"Wholesale and retail trade; repair of motor vehicles and motorcycles","nameBn":""},{"id":8,"name":"Transportation and storage including postal and courier","nameBn":""},{"id":9,"name":"Accommodation and food services activities","nameBn":""},{"id":10,"name":"Information and Communication","nameBn":""},{"id":11,"name":"Financial and Incurance Activities","nameBn":""},{"id":12,"name":"Real estate activities","nameBn":""},{"id":13,"name":"Professional, scientific and technical activities","nameBn":""},{"id":14,"name":"Administrative and Support Service Activities","nameBn":""},{"id":15,"name":" Public administration and defence; compulsory social security","nameBn":""},{"id":16,"name":"Education","nameBn":""},{"id":17,"name":"Human health and social work activities","nameBn":""},{"id":18,"name":"Arts, entertainment and recreation","nameBn":""},{"id":19,"name":"Other service activities","nameBn":""},{"id":20,"name":"Activities of households as employers; undifferentiated goods and services producing activities of households for own use","nameBn":""},{"id":21,"name":"Activities of extraterritorial organizations and bodies","nameBn":""}
+    ],
+    "liabilityTypeList": [
+        {"id":11,"name":"Limited by share","nameBn":"sdfsdfsd"}
     ]
-    }
+}
