@@ -72,18 +72,6 @@ class MoaForm extends BaseForm {
         + '                 <div class="col-md-8 font-weight-bold groupLabel">Not selected</div>'
         + '             </div>'
         + '         </div>'
-/*        + '         <div class="col-md-4">'
-        + '             <div class="row col-md-12 mb-3">'
-        + '                 <div class="col-md-4">4. Class</div>'
-        + '                 <div class="col-md-8 classLabel"></div>'
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-4">'
-        + '             <div class="row col-md-12 mb-3">'
-        + '                 <div class="col-md-4">5. Sub Class</div>'
-        + '                 <div class="col-md-8 subClassLabel"></div>'
-        + '             </div>'
-        + '         </div>'*/
         + '         </div>'
 
         + '        <div class="row '+ this.businessObjectiveMoaEditPanelClassName +'" style="display: none;">'

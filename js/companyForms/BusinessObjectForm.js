@@ -4,7 +4,6 @@ class BusinessObjectForm extends BaseForm {
   moaGroupList = [];
   moaClassList = [];
   moaSubclassList = [];
-  moaLiabilityList = [];
   header = '';
   subHeader = '';
   formClassName = 'businessObjectForm';
@@ -13,6 +12,7 @@ class BusinessObjectForm extends BaseForm {
   moaGroupName = 'moaGroupSelect';
   moaClassName = 'moaClassSelect';
   moaSubClassName = 'moaSubClassSelect';
+  moaTypeList = [{'id': 'MODEL', 'name': 'Model'}, {'id': 'CUSTOM', 'name': 'Custom'}, {'id': 'PRE_APPROVED', 'name': 'Pre-Approved'}];
 
   constructor(header, subHeader, moaSectionList) {
     super();
@@ -33,6 +33,14 @@ class BusinessObjectForm extends BaseForm {
       html += super.getStepFormHeader(this.header);
     }
 
+    html +=  '<br/><div class="col-md-6 offset-md-3">'
+    + '             <div class="d-flex flex-column mb-4">'
+    + '                 <label class="form-label font-label">1. MOA Type <span class="red">*</span></label>'
+    +                   Obrs.APP.getCommonSelectBox(this.moaTypeList, 'moaTypeSelect', '')
+    + '             </div>'
+    + '         </div>';
+
+
     html += super.getStepFormSubHeader(this.subHeader);
 
     html += '    <div class="row p-4">'
@@ -52,12 +60,6 @@ class BusinessObjectForm extends BaseForm {
         + '             <div class="d-flex flex-column w-100 mb-4">'
         + '                 <label class="form-label font-label">3. Group <span class="red">*</span></label>'
         +                   Obrs.APP.getCommonSelectBox([], this.moaGroupName, '')
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-6">'
-        + '             <div class="d-flex flex-column w-100 mb-4">'
-        + '                 <label class="form-label font-label">4. Class <span class="red">*</span></label>'
-        +                   Obrs.APP.getCommonSelectBox([], this.moaClassName, '')
         + '             </div>'
         + '         </div>'
         + '     </div>'

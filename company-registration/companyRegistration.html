@@ -290,7 +290,9 @@
             }
         });
 
-        $(document).on('click', '.btn-success', function(){
+        $(document).on('click', '.companyRegistrationForm .btn-success', function(e){
+          e.preventDefault();
+
           $('div.remove').remove();
 
           if($($('.carousel-item.active .companyRegistrationForm .reg-form-input')[0]).val().includes("nafi")) {
