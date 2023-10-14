@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/dashboard.css" />
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <div class="container-fluid bg-white">
@@ -262,14 +263,14 @@
                                 src="../images/dashboard/name-check.svg"
                                 alt="dashboard image"
                         />
-                        <a href="/dashboard/user-dashboard-entity-name-search.html" class="left-menu-link active">Name check</a>
+                        <a href="./user-dashboard-entity-name-search.html" class="left-menu-link active">Name check</a>
                     </div>
                     <div class="d-flex gap-2 py-3 left-link">
                         <img
                                 src="../images/dashboard/name-clearance.svg"
                                 alt="dashboard image"
                         />
-                        <a href="/dashboard/name-clear-request.html" class="left-menu-link">Name clearance request</a>
+                        <a href="./name-clear-request.html" class="left-menu-link">Name clearance request</a>
                     </div>
                 </div>
             </div>
@@ -498,7 +499,7 @@
 <script>
     $(document).ready(function() {
       let url = new URL(window.location);
-      url.pathname = "/mock-html/src/dashboard/clearance-application.html";
+      url.pathname = window.urlPathPrefix + "/dashboard/clearance-application.html";
 
       $('#search').on('click', function() {
         let name = $('#entityName').val();
