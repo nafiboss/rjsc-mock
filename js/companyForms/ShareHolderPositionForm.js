@@ -86,6 +86,8 @@ class ShareHolderPositionForm extends BaseForm {
       placeholder: 'Select director, You can select multiple'
     });
 
+    $('.directorMultiSelect').select2().attr('val', [1,2,3]);
+
     $('.managingDirectorMultiSelect').select2({
       multiple:true,
       placeholder: 'Select managing director, You can select multiple'

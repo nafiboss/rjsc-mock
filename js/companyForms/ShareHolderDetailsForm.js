@@ -144,7 +144,13 @@ class ShareHolderDetailsForm extends BaseForm {
 
     $(document).on('change', '.shareHolderTypeSelect', function() {
         self.shareHolderType = $(this).val();
-        self._getElementByClass('nid-passport').show(300);
+        self._getElementByClass('nid-passport').hide();
+        if(self.shareHolderType == "LOCAL_INDIVIDUAL") {
+          self._getElementByClass('nid-passport.local').show(300);
+        } else if (self.shareHolderType == "FOREIGN_INDIVIDUAL") {
+          self._getElementByClass('nid-passport.foreign').show(300);  
+        }
+        
     });
 
     $(document).on('change', '.nid-passport', function(){
@@ -208,40 +214,19 @@ class ShareHolderDetailsForm extends BaseForm {
         // + '                 </div>'
         + '             </div>'
         + '         </div>'
-        + '         <div class="col-md-12 localOrForeignWrapperDiv" style="display: none;">'
-        + '             <div class="col-md-6 d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">Please choose any <span class="red">*</span></label>'
-        + '                 <div class="btn-group" role = "group">'
-        + '                    <button type="button" class="btn btn-sm btn-outline-info btnGroup localBtn" data-remove-class="btn-outline-info" data-add-class="btn-info">Local</button>'
-        + '                    <button type="button" class="btn btn-sm btn-outline-info btnGroup foreignBtn" data-remove-class="btn-outline-info" data-add-class="btn-info">Foreign</button>'
-        + '                 </div>'
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-12 ownershipTypeWrapperDiv" style="display: none;">'
-        + '             <div class="col-md-6 d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">Please choose any<span class="red">*</span></label>'
-        + '                 <div class="btn-group" role = "group">'
-        + '                    <button type="button" class="btn btn-sm btn-outline-warning btnGroup" data-remove-class="btn-outline-warning" data-add-class="btn-warning">State own</button>'
-        + '                    <button type="button" class="btn btn-sm btn-outline-warning btnGroup" data-remove-class="btn-outline-warning" data-add-class="btn-warning">Private</button>'
-        + '                 </div>'
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-12 ownershipTypeWrapperDiv" style="display: none;">'
-        + '             <div class="col-md-6 d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">Please choose any <span class="red">*</span></label>'
-        + '                 <div class="btn-group" role = "group">'
-        + '                    <button type="button" class="btn btn-sm btn-outline-warning btnGroup" data-remove-class="btn-outline-warning" data-add-class="btn-warning">State own</button>'
-        + '                    <button type="button" class="btn btn-sm btn-outline-warning btnGroup" data-remove-class="btn-outline-warning" data-add-class="btn-warning">Private</button>'
-        + '                 </div>'
-        + '             </div>'
-        + '         </div>'
         + '   </div>'
-        + '   <div class="col-md-6 nid-passport" style="display:none">'
+        + '   <div class="col-md-6 nid-passport local" style="display:none">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
-        + "                 <label class='form-label font-label'>National ID/Passport No.<span class='red'>*</span></label>"
-        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your national id/Passport"/>'
+        + "                 <label class='form-label font-label'>National ID<span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your national id"/>'
         + '             </div>'
         + '   </div>'
+        + '   <div class="col-md-6 nid-passport foreign" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>Passport No.<span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your Passport no"/>'
+        + '             </div>'
+        + '   </div>'    
         + '<div class="shareholder-details-form" style="display: none;">'
         + '    <div class="d-flex gray-bg p-2 w-100 justify-content-between">'
         + '        <span class="all-label">Basic Information</span>'
@@ -302,7 +287,7 @@ class ShareHolderDetailsForm extends BaseForm {
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
-        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + '             <div class="d-flex nid-passport local flex-column w-100 mb-3" style="display:none!important">'
         + "                 <label class='form-label font-label'>10. TIN(XXXXXXXXXXXXXXX) (If Required)<span class='red'>*</span></label>"
         + '                 <input type="text" class="plc reg-form-input form-control tin" placeholder="Enter your TIN"/>'
         + '             </div>'
@@ -313,6 +298,12 @@ class ShareHolderDetailsForm extends BaseForm {
         + '                 <input type="file" class="plc reg-form-input form-control"/>'
         + '             </div>'
         + '         </div>'
+        + '        <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>12. Upload scan copy of your signature<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control"/>'
+        + '             </div>'
+        + '         </div>'  
 
         + '<div class="d-flex gray-bg p-2 w-100 justify-content-between">'
         + '   <span class="all-label">Usual Residential Address</span>'
@@ -418,6 +409,7 @@ class ShareHolderDetailsForm extends BaseForm {
       html += '<th>Name</th>';
       html += '<th>Type</th>';
       html += '<th>No of Share</th>';
+      html += '<th>Direcrtor</th>';
       html += '<th></th>';
       html += '</tr>';
       html += '</thead>';
@@ -430,6 +422,7 @@ class ShareHolderDetailsForm extends BaseForm {
         html += '<td>'+ item.name +'</td>';
         html += '<td>'+ item.type +'</td>';
         html += '<td><input type="text" class="form-control plc"/></td>';
+        html += '<td><input type="checkbox" class="form-control form-check-input" style="height:2em;"/></td>';
         html += '<td>';
         html += '<button class="btn btn-sm btn-outline-success"><i class="fa fa-list me-1" data-id="'+ item.id +'"></i>View</button>';
         html += '<button class="btn btn-sm btn-outline-primary ms-1"><i class="fa fa-edit me-1" data-id="'+ item.id +'"></i>Edit</button>';

@@ -40,7 +40,7 @@ class BusinessObjectForm extends BaseForm {
     + '             </div>'
     + '         </div>';
 
-
+    html += '<div id="business-objective-selection" class="show-selection" style="display: none;">'
     html += super.getStepFormSubHeader(this.subHeader);
 
     html += '    <div class="row p-4">'
@@ -65,6 +65,7 @@ class BusinessObjectForm extends BaseForm {
         + '     </div>'
         + '</div>';
 
+        html += '</div>';
     return html;
   }
 
@@ -105,6 +106,15 @@ class BusinessObjectForm extends BaseForm {
           self._getElementByClass(self.moaSubClassName)
       );
     });
+
+    $(document).on('change', '.moaTypeSelect', function () {
+
+      if($(this).val() === 'MODEL'){
+        self._getElementByClass('show-selection').show();
+      } else {
+        self._getElementByClass('show-selection').hide();
+      }
+    });
   }
   _getBaseElementForThisForm(){
     return $(document).find('div.'+this.formClassName);
@@ -117,5 +127,6 @@ class BusinessObjectForm extends BaseForm {
 
     }
   }
+
 
 }
