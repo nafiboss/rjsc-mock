@@ -288,9 +288,6 @@
             if($('.carousel-item.active').data('formCode') == "PREVIEW_FORM") {
                 window.location.pathname = window.pathwindow.urlPathPrefix + "/dashboard/my-application.html";
             }
-            if($('.carousel-item.active').data('formCode') == "SHARE_HOLDER_FORM") {
-                $('.directorMultiSelect').val([1,2,3]).trigger('change').trigger('select2:select');
-            }
         });
 
         $(document).on('click', '.companyRegistrationForm .btn-success', function(e){

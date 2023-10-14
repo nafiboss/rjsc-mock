@@ -10,6 +10,7 @@ class ShareHolderDetailsForm extends BaseForm {
       {'id': 'FOREIGN_CORPORATE', 'name': 'Foreign Corporate'}
   ];
   shareHolderType = '';
+  representativeAdded = false;
   localOrForeign = '';
   stateOwnOrPrivate = '';
   formClassName = 'shareHolderDetailsForm';
@@ -144,17 +145,43 @@ class ShareHolderDetailsForm extends BaseForm {
 
     $(document).on('change', '.shareHolderTypeSelect', function() {
         self.shareHolderType = $(this).val();
+        self.representativeAdded = false;
+
         self._getElementByClass('nid-passport').hide();
+        self._getElementByClass('shareholder-details-form').hide();
         if(self.shareHolderType == "LOCAL_INDIVIDUAL") {
           self._getElementByClass('nid-passport.local').show(300);
+          self._getElementByClass('nid-passport.local.corporate').hide();
         } else if (self.shareHolderType == "FOREIGN_INDIVIDUAL") {
-          self._getElementByClass('nid-passport.foreign').show(300);  
+          self._getElementByClass('nid-passport.foreign').show(300); 
+          self._getElementByClass('nid-passport.foreign.corporate').hide(); 
+        } else if(self.shareHolderType == "LOCAL_CORPORATE") {
+          self._getElementByClass('nid-passport.local.corporate').show(300);
+        } else if(self.shareHolderType == "FOREIGN_CORPORATE") {
+          self._getElementByClass('nid-passport.foreign.corporate').show(300);
         }
         
     });
 
-    $(document).on('change', '.nid-passport', function(){
-      self._getElementByClass('shareholder-details-form').show(300);
+    $(document).on('change click', '.nid-passport', function(e){
+      e.preventDefault();
+
+      if(self.shareHolderType == "LOCAL_INDIVIDUAL" || self.shareHolderType == "FOREIGN_INDIVIDUAL" || self.representativeAdded) {
+        self._getElementByClass('shareholder-details-form').show(300);
+      } else {
+        self._getElementByClass('entity-details-form').show(300);
+      }
+    });
+
+    $(document).on('click', '.nid-passport.local-nid', function(e){
+      e.preventDefault();
+      $(this).hide();
+      self.representativeAdded = true;
+      self._getElementByClass('entity-details-form').hide();
+      self._getElementByClass('shareholder-details-form').hide();
+      self._getElementByClass('nid-passport.local').show(300); 
+      self._getElementByClass('nid-passport.local.corporate').hide();
+      self._getElementByClass('nid-passport.foreign.corporate').hide();
     });
 
     $(document).on('change', '.divisionSelect', function(){
@@ -213,8 +240,6 @@ class ShareHolderDetailsForm extends BaseForm {
         // + '                    <button type="button" class="btn btn-sm btn-outline-primary btnGroup shareHolderTypeBtn" data-remove-class="btn-outline-primary" data-add-class="btn-primary">Corporate</button>'
         // + '                 </div>'
         + '             </div>'
-        + '         </div>'
-        + '   </div>'
         + '   <div class="col-md-6 nid-passport local" style="display:none">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
         + "                 <label class='form-label font-label'>National ID<span class='red'>*</span></label>"
@@ -223,13 +248,155 @@ class ShareHolderDetailsForm extends BaseForm {
         + '   </div>'
         + '   <div class="col-md-6 nid-passport foreign" style="display:none">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
-        + "                 <label class='form-label font-label'>Passport No.<span class='red'>*</span></label>"
-        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your Passport no"/>'
+        + "                 <label class='form-label font-label'>Passport No<span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your passport no"/>'
+        + '             </div>'
+        + '   </div>'
+        + '   <div class="col-md-6 nid-passport local corporate" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>RJSC Registration number<span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your Registration no"/>'
+        + '                 <br/><input type="button" class="btn-primary form-control nationalIdOrPassport" placeholder="Enter your Registration no" value="Not registered"></button>' 
         + '             </div>'
         + '   </div>'    
+        + '   <div class="col-md-6 nid-passport foreign corporate" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>RJSC Registration number<span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your Registration no"/>'
+        + '                 <br/><input type="button" class="btn-primary form-control nationalIdOrPassport" placeholder="Enter your Registration no" value="Not registered"></button>' 
+        + '             </div>'
+        + '   </div>'    
+
+        + '         </div>'
+        + '   </div>'
+        + '<div class="entity-details-form" style="display: none;">'
+        + '    <div class="d-flex gray-bg p-2 w-100 justify-content-between">'
+        + '        <span class="all-label">Entity Basic Information</span>'
+        + '    </div>'
+        + '    <div class="row p-4">'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-3">'
+        + '                 <label class="form-label font-label">1. Name <span class="red">*</span></label>'
+        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your entity name"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '         <div class="d-flex flex-column w-100">'
+        + '             <label htmlFor="exampleInputEmail1" class="form-label font-label">2. Entity Type</label>'
+        + '             <select class="form-select plc reg-form-input form-control entityType">'
+        + '               <option class="plc">Choose Any</option>'
+        + '               <option value="11">Private Company</option>'
+        + '               <option value="9">Public Company</option>'
+        + '               <option value="1">Trade Organization</option>'
+        + '               <option value="2">Foreign Company</option>'
+        + '               <option value="3">Society</option>'
+        + '               <option value="4">Partnership Firm</option>'
+        + '               <option value="5">Company Under Section 28</option>'
+        + '               <option value="6">Company Under Section 29</option>'
+        + '               <option value="7">One Person Company</option>'
+        + '             </select>'
+        + '         </div>'
+        + '     </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-3">'
+        + '                 <label class="form-label font-label">3. BIN/TIN no<span class="red">*</span></label>'
+        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your BIN/TIN no"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>4. Upload scan copy of your Tax Identification Number (BIN/TIN)<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-3">'
+        + '                 <label class="form-label font-label">5. Trade License no <span class="red">*</span></label>'
+        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your Trade License no"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>6. Upload scan copy of your Trade License<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-3">'
+        + '                 <label class="form-label font-label">7. VAT Registration no <span class="red">*</span></label>'
+        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your VAT Registration no"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>8. Upload scan copy of your VAT Registration<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control"/>'
+        + '             </div>'
+        + '         </div>'
+        + '<div class="d-flex gray-bg p-2 w-100 justify-content-between">'
+        + '   <span class="all-label">Entity Address</span>'
+        + '</div>'
+        + '    <div class="row p-4">'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-4">'
+        + '                 <label class="form-label font-label nid-passport local corporate">1. Division <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign corporate">1. Country <span class="red">*</span></label>'
+        + Obrs.APP.getCommonSelectBox(this.divisionList, this.divisionSelectBoxClassName, '')
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-4">'
+        + '                 <label class="form-label font-label nid-passport local corporate">2. District <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign corporate">2. State <span class="red">*</span></label>'        
+        + Obrs.APP.getCommonSelectBox(this.districtList, this.districtSelectBoxClassName, '')
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-4">'
+        + '                 <label class="form-label font-label nid-passport local corporate">3. Upojela/Thana <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign corporate">3. City <span class="red">*</span></label>'
+        + Obrs.APP.getCommonSelectBox(this.upazilaList, this.upazilaSelectBoxClassName, '')
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100">'
+        + '                 <label class="form-label font-label">4. Post Code</label>'
+        + '                 <input type="email" class="plc reg-form-input form-control" aria-describedby="emailHelp" placeholder="Type post code"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-4">'
+        + '                 <label class="form-label font-label">5. Enter your address</label>'
+        + '                 <div class="form-floating">'
+        + '                 <textarea class="plc form-control" placeholder="Type your address" id="floatingTextarea2"></textarea>'
+        + '                 <label class="plc">Comments</label>'
+        + '                 </div>'
+        + '             </div>'
+        + '         </div>'
+        + '   <div class="col-md-6 nid-passport local corporate" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3"> &nbsp;'
+        + '             </div>'
+        + '   </div>'
+        + '   <div class="col-md-6 nid-passport local corporate local-nid" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + '                 <br/><input type="button" class="btn-primary form-control nationalIdOrPassport" placeholder="Enter your Registration no" value="Add representative"></button>' 
+        + '             </div>'
+        + '   </div>'
+        + '   <div class="col-md-6 nid-passport foreign corporate" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3"> &nbsp;'
+        + '             </div>'
+        + '   </div>'
+        + '   <div class="col-md-6 nid-passport foreign corporate local-nid" style="display:none">'
+        + '             <div class="d-flex flex-column w-100 mb-3">'
+        + '                 <br/><input type="button" class="btn-primary form-control nationalIdOrPassport" placeholder="Enter your Registration no" value="Add representative"></button>' 
+        + '             </div>'
+        + '   </div>'
+        + '    </div>' 
+        + '    </div>'
+        + '</div>'
         + '<div class="shareholder-details-form" style="display: none;">'
         + '    <div class="d-flex gray-bg p-2 w-100 justify-content-between">'
-        + '        <span class="all-label">Basic Information</span>'
+        + '        <span class="all-label">Individaul Basic Information</span>'
         + '    </div>'
         + '    <div class="row p-4">' 
         + '         <div class="col-md-6">'
@@ -304,26 +471,28 @@ class ShareHolderDetailsForm extends BaseForm {
         + '                 <input type="file" class="plc reg-form-input form-control"/>'
         + '             </div>'
         + '         </div>'  
-
         + '<div class="d-flex gray-bg p-2 w-100 justify-content-between">'
         + '   <span class="all-label">Usual Residential Address</span>'
         + '</div>'
         + '    <div class="row p-4">'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">1. Division <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">1. Division <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">1. Country <span class="red">*</span></label>'
         + Obrs.APP.getCommonSelectBox(this.divisionList, this.divisionSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
-        + '                  <label class="form-label font-label">2. District <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">2. District <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">2. State <span class="red">*</span></label>'        
         + Obrs.APP.getCommonSelectBox(this.districtList, this.districtSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
-        + '                 <label class="form-label font-label">3. Upojela/Thana <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">3. Upojela/Thana <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">3. City <span class="red">*</span></label>'
         + Obrs.APP.getCommonSelectBox(this.upazilaList, this.upazilaSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
@@ -350,19 +519,22 @@ class ShareHolderDetailsForm extends BaseForm {
         + '    <div class="row p-4">'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">1. Division <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">1. Division <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">1. Country <span class="red">*</span></label>'
         + Obrs.APP.getCommonSelectBox(this.divisionList, this.divisionSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
-        + '                  <label class="form-label font-label">2. District <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">2. District <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">2. State <span class="red">*</span></label>'        
         + Obrs.APP.getCommonSelectBox(this.districtList, this.districtSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
-        + '                 <label class="form-label font-label">3. Upojela/Thana <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport local">3. Upojela/Thana <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label nid-passport foreign">3. City <span class="red">*</span></label>'
         + Obrs.APP.getCommonSelectBox(this.upazilaList, this.upazilaSelectBoxClassName, '')
         + '             </div>'
         + '         </div>'
@@ -409,7 +581,7 @@ class ShareHolderDetailsForm extends BaseForm {
       html += '<th>Name</th>';
       html += '<th>Type</th>';
       html += '<th>No of Share</th>';
-      html += '<th>Direcrtor</th>';
+      html += '<th>Chose Direcrtor</th>';
       html += '<th></th>';
       html += '</tr>';
       html += '</thead>';

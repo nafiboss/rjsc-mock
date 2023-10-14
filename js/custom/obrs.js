@@ -21,6 +21,7 @@ Obrs.APP = {
     TOAST_SUCCESS_MSG_TYPE: 'success',
     TOAST_ERROR_MSG_TYPE: 'error',
     TOAST_WARNING_MSG_TYPE: 'warning',
+    SELECTED_VALUES: {},
     init: function (opts) {
         this.contextRoot = opts.contextRoot;
     },

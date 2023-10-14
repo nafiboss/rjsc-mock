@@ -108,7 +108,7 @@ class BusinessObjectForm extends BaseForm {
     });
 
     $(document).on('change', '.moaTypeSelect', function () {
-
+      Obrs.APP.SELECTED_VALUES.SELECTED_MOA_TYPE = $(this).val();   
       if($(this).val() === 'MODEL'){
         self._getElementByClass('show-selection').show();
       } else {

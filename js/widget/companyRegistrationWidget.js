@@ -297,6 +297,13 @@ $.widget("obrs.companyRegistrationWidget", {
         $('#registration-carousel').on('slide.bs.carousel', function (event) {
             self.fillCurrentPrevAndNextStep($(event.relatedTarget).attr('data-form-code'));
             self.updateStepProgressIcon();
+
+            console.log("SELECTED FORM " + $(event.relatedTarget).attr('data-form-code'));
+            if($(event.relatedTarget).attr('data-form-code') == "SHARE_HOLDER_POSITION_FORM") {
+                $('.directorMultiSelect').val([1,2,3]).trigger('change').trigger('select2:select');
+            } else if ($(event.relatedTarget).attr('data-form-code') == "MOA_FORM" && Obrs.APP.SELECTED_VALUES.SELECTED_MOA_TYPE) {
+                $(".moaTypeSelect").val(Obrs.APP.SELECTED_VALUES.SELECTED_MOA_TYPE);
+            }
         });
 
         $.each(self.data.formObject, function(idx, formObj){
