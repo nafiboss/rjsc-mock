@@ -250,13 +250,16 @@
                       <div class="fs-20b">History</div>
                       <div class="d-flex">
                         <div class="input-group">
-                          <input
-                            type="search"
-                            class="form-control rounded"
-                            placeholder="Enter case ID or Name"
-                            aria-label="Search"
-                            aria-describedby="search-addon"
-                          />
+                          <div class="form-group has-search">
+                            <span
+                              class="fa fa-search form-control-feedback"
+                            ></span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter case id or name"
+                            />
+                          </div>
                           <button
                             type="button"
                             class="btn btn-outline-primary bg-primary text-white font-label"
@@ -268,34 +271,157 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <form class="row" action="#">
-                      <div class="col-md-6">
-                        <div class="d-flex w-100">
-                          <div class="font-label pe-2">Showing</div>
-                          <button
-                            class="dropdown-toggle d-flex w-100 border border-gray bg-white p-2 justify-content-between"
-                            type="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
-                            All cases
+                <div class="row pb-4">
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Application Type</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Status</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Submission ID</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Choose date</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="choose"
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 py-2">
+                          <button type="button" class="btn bg-transparent">
+                            Today
                           </button>
-                          <ul class="dropdown-menu p-4">
-                            <li class="font-label pb-2">All cases</li>
-                            <li class="font-label pb-2">Case accepted</li>
-                            <li class="font-label pb-2">Case rejected</li>
-                          </ul>
+                          <button type="button" class="btn btn-primary">
+                            Yesterday
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Last week
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Last month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Three month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Six month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            One year
+                          </button>
                         </div>
                       </div>
-                      <div class="col-md-6"></div>
-                    </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Entity type</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 d-flex gap-4 justify-content-end">
+                        <button
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent"
+                        >
+                          <div class="">
+                            <i
+                              class="fa-solid fa-xmark"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                          <div class="text-primary font-label">Clear all</div>
+                        </button>
+                        <button
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-primary"
+                        >
+                          <div class="">
+                            <i
+                              class="fa-solid fa-check"
+                              style="color: #fff"
+                            ></i>
+                          </div>
+                          <div class="text-white font-label">Apply</div>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row d-flex rounded p-4">
+            <div class="row d-flex rounded p-2">
               <div class="col-md-12">
                 <table
                   id="example"
@@ -310,20 +436,198 @@
                       <th>Organization type</th>
                       <th>Date</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      <th class="d-flex justify-content-center">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011-04-25</td>
-                      <td>$320,800</td>
-                      <td>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
                         <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent"
                         >
                           <div class="text-primary font-label">Recall</div>
                           <div class="">
@@ -337,14 +641,15 @@
                     </tr>
                     <tr>
                       <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011-07-25</td>
-                      <td>$170,750</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
                         >
                           <div class="text-primary font-label">Recall</div>
                           <div class="">
@@ -353,20 +658,20 @@
                               style="color: #1952f4"
                             ></i>
                           </div>
-                        </button>
+                        </a>
                       </td>
                     </tr>
-
                     <tr>
-                      <td>Sakura Yamamoto</td>
-                      <td>Support Engineer</td>
-                      <td>Tokyo</td>
-                      <td>37</td>
-                      <td>2009-08-19</td>
-                      <td>$139,575</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
                         >
                           <div class="text-primary font-label">Recall</div>
                           <div class="">
@@ -375,20 +680,64 @@
                               style="color: #1952f4"
                             ></i>
                           </div>
-                        </button>
+                        </a>
                       </td>
                     </tr>
                     <tr>
-                      <td>Thor Walton</td>
-                      <td>Developer</td>
-                      <td>New York</td>
-                      <td>61</td>
-                      <td>2013-08-11</td>
-                      <td>$98,540</td>
-                      <td>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
                         <a
                           href="./task-dealing.html"
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
                         >
                           <div class="text-primary font-label">View</div>
                           <div class="">
@@ -398,227 +747,6 @@
                             ></i>
                           </div>
                         </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Finn Camacho</td>
-                      <td>Support Engineer</td>
-                      <td>San Francisco</td>
-                      <td>47</td>
-                      <td>2009-07-07</td>
-                      <td>$87,500</td>
-                      <td>
-                        <a
-                          href="./task-dealing.html"
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="text-primary font-label">View</div>
-                          <div class="">
-                            <i
-                              class="fa-solid fa-eye"
-                              style="color: #1952f4"
-                            ></i>
-                          </div>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Serge Baldwin</td>
-                      <td>Data Coordinator</td>
-                      <td>Singapore</td>
-                      <td>64</td>
-                      <td>2012-04-09</td>
-                      <td>$138,575</td>
-                      <td>
-                        <a
-                          href="./task-dealing.html"
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="text-primary font-label">View</div>
-                          <div class="">
-                            <i
-                              class="fa-solid fa-eye"
-                              style="color: #1952f4"
-                            ></i>
-                          </div>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Zenaida Frank</td>
-                      <td>Software Engineer</td>
-                      <td>New York</td>
-                      <td>63</td>
-                      <td>2010-01-04</td>
-                      <td>$125,250</td>
-                      <td>
-                        <a
-                          href="./task-dealing.html"
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="text-primary font-label">View</div>
-                          <div class="">
-                            <i
-                              class="fa-solid fa-eye"
-                              style="color: #1952f4"
-                            ></i>
-                          </div>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Zorita Serrano</td>
-                      <td>Software Engineer</td>
-                      <td>San Francisco</td>
-                      <td>56</td>
-                      <td>2012-06-01</td>
-                      <td>$115,000</td>
-                      <td>
-                        <a
-                          href="./task-dealing.html"
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="text-primary font-label">View</div>
-                          <div class="">
-                            <i
-                              class="fa-solid fa-eye"
-                              style="color: #1952f4"
-                            ></i>
-                          </div>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>Hermione Butler</td>
-                      <td>Regional Director</td>
-                      <td>London</td>
-                      <td>47</td>
-                      <td>2011-03-21</td>
-                      <td>$356,250</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Lael Greer</td>
-                      <td>Systems Administrator</td>
-                      <td>London</td>
-                      <td>21</td>
-                      <td>2009-02-27</td>
-                      <td>$103,500</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Jonas Alexander</td>
-                      <td>Developer</td>
-                      <td>San Francisco</td>
-                      <td>30</td>
-                      <td>2010-07-14</td>
-                      <td>$86,500</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Shad Decker</td>
-                      <td>Regional Director</td>
-                      <td>Edinburgh</td>
-                      <td>51</td>
-                      <td>2008-11-13</td>
-                      <td>$183,000</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Michael Bruce</td>
-                      <td>Javascript Developer</td>
-                      <td>Singapore</td>
-                      <td>29</td>
-                      <td>2011-06-27</td>
-                      <td>$183,000</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Donna Snider</td>
-                      <td>Customer Support</td>
-                      <td>New York</td>
-                      <td>27</td>
-                      <td>2011-01-25</td>
-                      <td>$112,000</td>
-                      <td>
-                        <button
-                          class="border border-primary rounded d-flex gap-2 px-4 py-2 action-btn"
-                        >
-                          <div class="">
-                            <img
-                              src="../../images/registration-process/check.png"
-                              alt="action button"
-                              class=""
-                            />
-                          </div>
-                          <div class="text-primary font-label">Accept</div>
-                        </button>
                       </td>
                     </tr>
                   </tbody>
@@ -631,10 +759,10 @@
                   <ul class="pagination d-flex justify-content-center">
                     <li class="page-item">
                       <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
+                        <span aria-hidden="true">&#60;</span>
                       </a>
                     </li>
-                    <li class="page-item">
+                    <li class="page-item active">
                       <a class="page-link" href="#">1</a>
                     </li>
                     <li class="page-item">
@@ -645,7 +773,7 @@
                     </li>
                     <li class="page-item">
                       <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true">&#62;</span>
                       </a>
                     </li>
                   </ul>

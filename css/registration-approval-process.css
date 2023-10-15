@@ -7,7 +7,8 @@
   padding: 13px 0;
 }
 .new-registration-link .fa-circle {
-  padding-right: 4px;
+  padding-right: 6px;
+  font-size: 6px;
 }
 .new-registration-link .list-group-item.active {
   background-color: transparent;
@@ -29,11 +30,21 @@
 .table > thead {
   background-color: rgba(240, 244, 255, 1);
 }
+.table-striped > tbody {
+  width: 100%;
+}
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #fff;
 }
+.table-striped > tbody > tr {
+  vertical-align: middle;
+  width: 100%;
+}
 .table-striped > tbody > tr:nth-of-type(even) {
   background-color: rgba(246, 246, 249, 1);
+}
+.navigation ul li:active {
+  background-color: blue;
 }
 .accordion-button {
   color: black;
@@ -53,4 +64,17 @@
 
 .view-btn-width {
   width: 110px;
+}
+.accordion-button:not(.collapsed) {
+  background-color: rgb(240, 248, 255);
+  color: black;
+}
+.custom-border {
+  border-bottom: 1px solid rgb(242, 245, 243);
+}
+.full-border-light {
+  border: 1px solid rgb(242, 245, 243);
+}
+.forward-to-bg {
+  background-color: rgba(242, 242, 255, 1);
 }

@@ -104,12 +104,71 @@
                 <li class="font-label border-bottom border-1 px-2">
                   02. A. General Information
                   <ul>
-                    <li class="font-label">a.1 Basic Information</li>
-                    <li class="font-label">a.2 Address</li>
-                    <li class="font-label">a.3 Business information</li>
-                    <li class="font-label">a.4 Business Details</li>
-                    <li class="font-label">a.5 Directors information</li>
-                    <li class="font-label">a.6 Quorum information</li>
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.1 Basic Information
+                        <i
+                          class="fa-solid fa-flag visually-hidden"
+                          style="color: #ffa500"
+                        ></i>
+                      </div>
+                    </li>
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.2 Address
+                        <i
+                          class="fa-solid fa-flag visually-hidden"
+                          style="color: #ffa500"
+                        ></i>
+                      </div>
+                    </li>
+
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.3 Business information
+                        <i class="fa-solid fa-flag" style="color: #ffa500"></i>
+                      </div>
+                    </li>
+
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.4 Business Details
+                        <i
+                          class="fa-solid fa-flag visually-hidden"
+                          style="color: #ffa500"
+                        ></i>
+                      </div>
+                    </li>
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.5 Directors information
+                        <i
+                          class="fa-solid fa-flag visually-hidden"
+                          style="color: #ffa500"
+                        ></i>
+                      </div>
+                    </li>
+                    <li class="font-label px-3">
+                      <div
+                        class="d-flex gap-3 align-items-center justify-content-between"
+                      >
+                        a.6 Quorum information
+                        <i
+                          class="fa-solid fa-flag visually-hidden"
+                          style="color: #ffa500"
+                        ></i>
+                      </div>
+                    </li>
                   </ul>
                 </li>
                 <li class="font-label border-bottom border-1 px-2">
@@ -468,14 +527,14 @@
             </div>
           </div>
 
-          <div class="custom-radius border border-1 mt-3 w-100">
+          <div class="custom-radius mt-3 w-100">
             <div class="row w-100">
               <div class="col-md-12 mx-0">
                 <div class="accordion" id="accordionExample">
-                  <div class="accordion-item w-100">
+                  <div class="accordion-item w-100 custom-radius">
                     <h2 class="accordion-header w-100" id="headingOne">
                       <button
-                        class="accordion-button d-flex"
+                        class="accordion-button d-flex py-4"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
@@ -498,8 +557,16 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="accordion-body">
-                        <div class="d-flex justify-content-between px-2 py-4">
-                          <div class="font-label">Entity type</div>
+                        <div
+                          class="d-flex justify-content-between px-2 py-4 border border-warning rounded"
+                        >
+                          <div class="d-flex align-items-center gap-3">
+                            <i
+                              class="fa-solid fa-flag"
+                              style="color: #ffa500"
+                            ></i>
+                            <div class="font-label">Entity type</div>
+                          </div>
                           <div class="font-label">Private company</div>
                           <div class="form-check">
                             <input
@@ -511,67 +578,188 @@
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-4 py-4">
-                          <div class="fs-16-24-700 header-background px-2">
+                          <div class="fs-14-21-700 header-background p-2">
                             a.1 Basic Information
                           </div>
-                          <div class="d-flex justify-content-between px-2">
-                            <div class="font-label">1. Company Name</div>
-                            <div class="font-label">
-                              Mayer doua biriyani house
-                            </div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
+
+                          <div class="d-flex p-2 custom-border">
+                            <div class="d-flex flex-column w-100">
+                              <div class="d-flex justify-content-between mb-3">
+                                <div class="font-label">1. Company Name</div>
+                                <div class="font-label">
+                                  Mayer doua biriyani house
+                                </div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="flexCheckDefault"
+                                    data-bs-toggle="collapse"
+                                    href="#companyname"
+                                    aria-expanded="false"
+                                    aria-controls="companyname"
+                                    role="button"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="collapse" id="companyname">
+                                <div class="card card-body">
+                                  <div class="mb-3">
+                                    <label
+                                      for="exampleFormControlInput1"
+                                      class="form-label"
+                                      >Company Name</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="exampleFormControlInput1"
+                                      placeholder="type here"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="d-flex justify-content-between px-2">
-                            <div class="font-label">2. Liability Type</div>
-                            <div class="font-label">Private company</div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
+
+                          <div class="d-flex p-2 custom-border">
+                            <div class="d-flex flex-column w-100">
+                              <div class="d-flex justify-content-between mb-3">
+                                <div class="font-label">2. Liability Type</div>
+                                <div class="font-label">Private company</div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="flexCheckDefault"
+                                    data-bs-toggle="collapse"
+                                    href="#liability"
+                                    aria-expanded="false"
+                                    aria-controls="liability"
+                                    role="button"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="collapse" id="liability">
+                                <div class="card card-body">
+                                  <div class="mb-3">
+                                    <label
+                                      for="exampleFormControlInput1"
+                                      class="form-label"
+                                      >Liability Type</label
+                                    >
+                                    <select
+                                      class="form-select"
+                                      aria-label="Default select example"
+                                    >
+                                      <option selected>
+                                        Open this select menu
+                                      </option>
+                                      <option value="1">One</option>
+                                      <option value="2">Two</option>
+                                      <option value="3">Three</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="d-flex justify-content-between px-2">
-                            <div class="font-label">
-                              3. Entity Email Address
-                            </div>
-                            <div class="font-label">Private company</div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
+                          <div class="d-flex p-2 custom-border">
+                            <div class="d-flex flex-column w-100">
+                              <div class="d-flex justify-content-between mb-3">
+                                <div class="font-label">
+                                  3. Entity Email Address
+                                </div>
+                                <div class="font-label">Private company</div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="flexCheckDefault"
+                                    data-bs-toggle="collapse"
+                                    href="#companyemail"
+                                    aria-expanded="false"
+                                    aria-controls="companyemail"
+                                    role="button"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="collapse" id="companyemail">
+                                <div class="card card-body">
+                                  <div class="mb-3">
+                                    <label
+                                      for="exampleFormControlInput1"
+                                      class="form-label"
+                                      >Entity Email address</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="exampleFormControlInput1"
+                                      placeholder="name@example.com"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-4">
-                          <div class="fs-16-24-700 header-background px-2">
+                          <div
+                            class="fs-14-21-700 header-background p-2 custom-border"
+                          >
                             a.2 Address of the Entity
                           </div>
-                          <div class="d-flex justify-content-between px-2">
-                            <div class="font-label">1. District</div>
-                            <div class="font-label">Dhaka</div>
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="flexCheckDefault"
-                              />
+
+                          <div class="d-flex p-2 custom-border">
+                            <div class="d-flex flex-column w-100">
+                              <div class="d-flex justify-content-between mb-3">
+                                <div class="font-label">District</div>
+                                <div class="font-label">Dhaka</div>
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    value=""
+                                    id="flexCheckDefault"
+                                    data-bs-toggle="collapse"
+                                    href="#district"
+                                    aria-expanded="false"
+                                    aria-controls="district"
+                                    role="button"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="collapse" id="district">
+                                <div class="card card-body">
+                                  <div class="mb-3">
+                                    <label
+                                      for="exampleFormControlInput1"
+                                      class="form-label"
+                                      >District</label
+                                    >
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="exampleFormControlInput1"
+                                      placeholder="Type here"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div class="d-flex justify-content-between px-2">
+
+                          <div
+                            class="d-flex justify-content-between p-2 custom-border"
+                          >
                             <div class="font-label">2. Division</div>
                             <div class="font-label">Dhaka</div>
                             <div class="form-check">
@@ -583,7 +771,9 @@
                               />
                             </div>
                           </div>
-                          <div class="d-flex justify-content-between px-2">
+                          <div
+                            class="d-flex justify-content-between p-2 custom-border"
+                          >
                             <div class="font-label">3. Upojela/Thana</div>
                             <div class="font-label">Mohakhali</div>
                             <div class="form-check">
@@ -599,18 +789,26 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="custom-radius mt-3 w-100">
+            <div class="row w-100">
+              <div class="col-md-12 mx-0">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item w-100 custom-radius">
+                    <h2 class="accordion-header w-100" id="headingOne">
                       <button
-                        class="accordion-button collapsed d-flex"
+                        class="accordion-button d-flex py-4"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo"
-                        aria-expanded="false"
+                        aria-expanded="true"
                         aria-controls="collapseTwo"
                       >
                         <span class="fs-24-38-500"
-                          >A. Business type information</span
+                          >B. Business type information</span
                         >
                         <span class="font-label"
                           >(as of Memorandum and Articles of Association,
@@ -620,16 +818,18 @@
                     </h2>
                     <div
                       id="collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
                       data-bs-parent="#accordionExample"
                     >
                       <div class="accordion-body">
                         <div class="d-flex flex-column gap-4 py-4">
-                          <div class="fs-16-24-700 header-background px-2">
+                          <div class="fs-14-21-700 header-background p-2">
                             Downloadable Item
                           </div>
-                          <div class="d-flex justify-content-between px-2">
+                          <div
+                            class="d-flex justify-content-between p-2 custom-border"
+                          >
                             <div class="font-label">1. MOA</div>
                             <div class="d-flex gap-3">
                               <div
@@ -656,7 +856,9 @@
                               </div>
                             </div>
                           </div>
-                          <div class="d-flex justify-content-between px-2">
+                          <div
+                            class="d-flex justify-content-between p-2 custom-border"
+                          >
                             <div class="font-label">2. MOA</div>
                             <div class="d-flex gap-3">
                               <div
@@ -685,12 +887,12 @@
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-4">
-                          <div class="fs-16-24-700 header-background px-2">
+                          <div class="fs-14-21-700 header-background p-2">
                             b.1 Shareholders information: 4
                           </div>
 
                           <div
-                            class="d-flex justify-content-between px-2 border border-1 custom-radius flex-column"
+                            class="d-flex justify-content-between px-2 full-border-light custom-radius flex-column"
                           >
                             <div class="row">
                               <div class="col-md-12">
@@ -711,54 +913,61 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="row w-100 gap-4 d-flex">
-                              <div class="col-md-12 d-flex pb-3 pt-2 gap-4">
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
+                            <div class="row py-4 px-4">
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         1. Name
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div
                                         class="font-label text-body float-left"
                                       >
                                         Shahidul Islam
                                       </div>
                                     </div>
-                                    <div class="d-flex justify-content-between">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         2. National ID
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div class="font-label text-body">
                                         123 123 123 123
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        3. Type
-                                      </div>
-                                      <div class="font-label text-body">
-                                        Shareholder type
-                                      </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      3. Type
                                     </div>
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        4. TIN
-                                      </div>
-                                      <div class="font-label text-body">
-                                        5454 5484 544
-                                      </div>
+                                    <div class="font-label text-body">
+                                      Shareholder type
+                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      4. TIN
+                                    </div>
+                                    <div class="font-label text-body">
+                                      5454 5484 544
                                     </div>
                                   </div>
                                 </div>
-                                <div class="d-flex w-20 justify-content-end">
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex justify-content-end">
                                   <div
-                                    class="d-flex btn-width gap-2 custom-radius border border-1 align-items-center"
+                                    class="d-flex btn-width p-2 custom-radius border border-1 align-items-center justify-content-between"
                                   >
                                     <a
                                       href="./profile-view.html"
@@ -778,7 +987,7 @@
                           </div>
 
                           <div
-                            class="d-flex justify-content-between px-2 border border-1 custom-radius flex-column"
+                            class="d-flex justify-content-between px-2 full-border-light custom-radius flex-column"
                           >
                             <div class="row">
                               <div class="col-md-12">
@@ -799,54 +1008,61 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="row w-100 gap-4 d-flex">
-                              <div class="col-md-12 d-flex pb-3 pt-2 gap-4">
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
+                            <div class="row py-4 px-4">
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         1. Name
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div
                                         class="font-label text-body float-left"
                                       >
                                         Shahidul Islam
                                       </div>
                                     </div>
-                                    <div class="d-flex justify-content-between">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         2. National ID
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div class="font-label text-body">
                                         123 123 123 123
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        3. Type
-                                      </div>
-                                      <div class="font-label text-body">
-                                        Shareholder type
-                                      </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      3. Type
                                     </div>
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        4. TIN
-                                      </div>
-                                      <div class="font-label text-body">
-                                        5454 5484 544
-                                      </div>
+                                    <div class="font-label text-body">
+                                      Shareholder type
+                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      4. TIN
+                                    </div>
+                                    <div class="font-label text-body">
+                                      5454 5484 544
                                     </div>
                                   </div>
                                 </div>
-                                <div class="d-flex w-20 justify-content-end">
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex justify-content-end">
                                   <div
-                                    class="d-flex btn-width gap-2 custom-radius border border-1 align-items-center"
+                                    class="d-flex btn-width p-2 custom-radius border border-1 align-items-center justify-content-between"
                                   >
                                     <a
                                       href="./profile-view.html"
@@ -865,7 +1081,7 @@
                             </div>
                           </div>
                           <div
-                            class="d-flex justify-content-between px-2 border border-1 custom-radius flex-column"
+                            class="d-flex justify-content-between px-2 full-border-light custom-radius flex-column"
                           >
                             <div class="row">
                               <div class="col-md-12">
@@ -886,54 +1102,61 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="row w-100 gap-4 d-flex">
-                              <div class="col-md-12 d-flex pb-3 pt-2 gap-4">
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
+                            <div class="row py-4 px-4">
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         1. Name
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div
                                         class="font-label text-body float-left"
                                       >
                                         Shahidul Islam
                                       </div>
                                     </div>
-                                    <div class="d-flex justify-content-between">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
                                       <div class="font-label text-secondary">
                                         2. National ID
                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
                                       <div class="font-label text-body">
                                         123 123 123 123
                                       </div>
                                     </div>
                                   </div>
                                 </div>
-
-                                <div class="d-flex w-40">
-                                  <div class="d-flex flex-column gap-3 w-100">
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        3. Type
-                                      </div>
-                                      <div class="font-label text-body">
-                                        Shareholder type
-                                      </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex flex-column gap-3">
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      3. Type
                                     </div>
-                                    <div class="d-flex justify-content-between">
-                                      <div class="font-label text-secondary">
-                                        4. TIN
-                                      </div>
-                                      <div class="font-label text-body">
-                                        5454 5484 544
-                                      </div>
+                                    <div class="font-label text-body">
+                                      Shareholder type
+                                    </div>
+                                  </div>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="font-label text-secondary">
+                                      4. TIN
+                                    </div>
+                                    <div class="font-label text-body">
+                                      5454 5484 544
                                     </div>
                                   </div>
                                 </div>
-                                <div class="d-flex w-20 justify-content-end">
+                              </div>
+                              <div class="col-md-4">
+                                <div class="d-flex justify-content-end">
                                   <div
-                                    class="d-flex btn-width gap-2 custom-radius border border-1 align-items-center"
+                                    class="d-flex btn-width p-2 custom-radius border border-1 align-items-center justify-content-between"
                                   >
                                     <a
                                       href="./profile-view.html"
@@ -948,84 +1171,216 @@
                                     ></i>
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            class="d-flex flex-column main-body-color p-4 border border-1 custom-radius w-100 justify-content-between"
-                          >
-                            <div class="d-flex mb-4 justify-content-between">
-                              <div class="font-label w-30">Forward To</div>
-                              <div class="d-flex w-40">
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Examinar</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                              </div>
-                              <div
-                                class="d-flex gap-2 align-items-center w-30 ps-4"
-                              >
-                                <div class="font-label">
-                                  You have selected (3) item.
-                                </div>
-                                <button
-                                  type="button"
-                                  class="btn fs-20b text-primary"
-                                >
-                                  Clear all
-                                </button>
-                              </div>
-                            </div>
-                            <div class="d-flex">
-                              <div class="font-label w-30">Write your note</div>
-                              <div class="d-flex flex-column w-70">
-                                <div class="mb-3">
-                                  <label
-                                    for="exampleFormControlInput1"
-                                    class="form-label"
-                                    >Select from predefined notes</label
-                                  >
-                                  <select
-                                    class="form-select"
-                                    aria-label="Default select example"
-                                  >
-                                    <option selected>Choose</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                                </div>
-                                <div class="mb-3">
-                                  <textarea
-                                    class="form-control"
-                                    id="exampleFormControlTextarea1"
-                                    rows="3"
-                                    placeholder="Everting is good, business can be approved"
-                                  ></textarea>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                              <div
-                                class="d-flex bg-primary custom-radius align-items-center p-1"
-                              >
-                                <button type="button" class="btn text-white">
-                                  Forward
-                                </button>
-                                <i
-                                  class="fa-solid fa-rotate-right"
-                                  style="color: #ffffff"
-                                ></i>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex flex-column my-4 border border-1 custom-radius w-100 justify-content-between"
+                  >
+                    <div
+                      class="d-flex mb-4 justify-content-between p-4 forward-to-bg"
+                    >
+                      <div class="fs-24-38-500 w-30">Forward To</div>
+                      <div class="d-flex w-40">
+                        <select
+                          class="form-select py-3"
+                          aria-label="Default select example"
+                        >
+                          <option selected class="py-2">
+                            Forward to Examinar
+                          </option>
+                          <option value="1" class="py-2">
+                            Forward to Clent
+                          </option>
+                          <option value="2" class="py-2">Forward to AR</option>
+                        </select>
+                      </div>
+                      <div class="d-flex gap-2 align-items-center w-30 ps-4">
+                        <div class="font-label">
+                          You have selected (3) item.
+                        </div>
+                        <button
+                          type="button"
+                          class="btn fs-20b text-primary text-decoration-underline"
+                        >
+                          Clear all
+                        </button>
+                      </div>
+                    </div>
+                    <div class="d-flex p-4">
+                      <div class="fs-16-24-700 w-30">Write your note</div>
+                      <div class="d-flex flex-column w-70">
+                        <div class="mb-3">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="form-label"
+                            >Select from predefined notes</label
+                          >
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Choose</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <textarea
+                            class="form-control"
+                            id="exampleFormControlTextarea1"
+                            rows="3"
+                            placeholder="Everting is good, business can be approved"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end pb-4 pe-4">
+                      <a
+                        href="./forwarding-application.html"
+                        class="d-flex bg-transparent border border-primary custom-radius align-items-center px-3 py-2"
+                      >
+                        <button
+                          type="button"
+                          class="btn text-primary font-label"
+                        >
+                          Forward
+                        </button>
+                        <i
+                          class="fa-solid fa-share-from-square"
+                          style="color: #1952f4"
+                        ></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex flex-column my-4 border border-1 custom-radius w-100 justify-content-between"
+                  >
+                    <div
+                      class="d-flex mb-4 justify-content-between p-4 forward-to-bg"
+                    >
+                      <div class="fs-24-38-500 w-30">Forward To</div>
+                      <div class="d-flex w-40">
+                        <select
+                          class="form-select py-3"
+                          aria-label="Default select example"
+                        >
+                          <option selected class="py-2">
+                            Forward to Client
+                          </option>
+                          <option value="1" class="py-2">
+                            Forward to Clent
+                          </option>
+                          <option value="2" class="py-2">Forward to AR</option>
+                        </select>
+                      </div>
+                      <div class="d-flex gap-2 align-items-center w-30 ps-4">
+                        <div class="font-label">
+                          You have selected (3) item.
+                        </div>
+                        <button
+                          type="button"
+                          class="btn fs-20b text-primary text-decoration-underline"
+                        >
+                          Clear all
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex flex-column gap-3 p-4 m-4 custom-radius full-border-light w-100"
+                    >
+                      <div class="row w-100 custom-border py-4">
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >1. Entity type</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >Private Company</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <textarea
+                            class="form-control"
+                            placeholder="Please correct this"
+                            id="floatingTextarea"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="row w-100 custom-border py-4">
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >1. Entity type</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >Private Company</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <textarea
+                            class="form-control"
+                            placeholder="Please correct this"
+                            id="floatingTextarea"
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="row w-100 custom-border py-4">
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >1. Entity type</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <label
+                            for="exampleFormControlInput1"
+                            class="font-label"
+                            >Private Company</label
+                          >
+                        </div>
+                        <div class="col-md-4">
+                          <textarea
+                            class="form-control"
+                            placeholder="Please correct this"
+                            id="floatingTextarea"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end pb-4 pe-4">
+                      <a
+                        href="./forwarding-application.html"
+                        class="d-flex bg-transparent border border-primary custom-radius align-items-center px-3 py-2"
+                      >
+                        <button
+                          type="button"
+                          class="btn text-primary font-label"
+                        >
+                          Send as an email
+                        </button>
+                        <i
+                          class="fa-solid fa-envelope"
+                          style="color: #1952f4"
+                        ></i>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -1048,7 +1403,12 @@
         </div>
 
         <div class="w-70 justify-content-end d-flex gap-2">
-          <button type="button" class="btn btn-primary text-white">
+          <button
+            type="button"
+            class="btn border border-primary text-white bg-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
             Approve
           </button>
           <a
@@ -1058,6 +1418,141 @@
           >
             Reject
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header dark-green">
+            <div class="d-flex flex-column">
+              <h5 class="modal-title text-white" id="exampleModalLabel">
+                You are about to approve the following submission.
+              </h5>
+              <span class="font-label text-white"
+                >Review details before proceeding.</span
+              >
+            </div>
+
+            <div class="">
+              <i
+                class="fa-solid fa-xmark"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div class="modal-body container p-5">
+            <div class="row border border-1 custom-radius p-5">
+              <div class="col-md-6">
+                <div class="d-flex flex-column gap-4">
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      1. Submission No:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      2. Submission Date:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">3. Client Name:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">4. Entity type:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">
+                      5. Request type:
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">Notes:</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="font-label text-secondary">Email advice:</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex flex-column gap-4">
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">20225655877</div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">18/01/1997</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">Mayer doa biriani</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">Private Company</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">Registration</div>
+                  </div>
+                  <div class="d-flex">
+                    <textarea
+                      class="form-control"
+                      placeholder="Type here"
+                      id="floatingTextarea"
+                    ></textarea>
+                  </div>
+                  <div class="d-flex">
+                    <textarea
+                      class="form-control"
+                      placeholder="Type here"
+                      id="floatingTextarea"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 main-body-color px-2 py-3 mt-3">
+                <div class="d-flex flex-column gap-2">
+                  <label for="exampleFormControlInput1" class="font-label"
+                    >Please confirm the submission no.</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Type the number"
+                  />
+                </div>
+                <div class="d-flex justify-content-end gap-2 pt-4">
+                  <button
+                    type="button"
+                    class="btn close-btn-background"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <div class="d-flex dark-green align-items-center p-2 rounded">
+                    <i
+                      class="fa-solid fa-check-double"
+                      style="color: #ffffff"
+                    ></i>
+                    <button type="button" class="text-white font-label btn">
+                      Confirm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

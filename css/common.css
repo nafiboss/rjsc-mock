@@ -22,7 +22,7 @@ body {
   padding-bottom: 40px;
 }
 .py-60-40 {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 .py-18 {
@@ -94,7 +94,7 @@ body {
 .green-opacity {
   color: #146c43;
 }
-.dark-blue {
+.dark-blue-bg {
   background-color: #031b4d;
 }
 .orange-bd {
@@ -206,6 +206,31 @@ body {
   font-weight: 500;
   line-height: 48px;
 }
+.fs-14-20-500 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.fs-14-21-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.fs-14-21-700 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.fs-18-28-700 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.fs-24-32-700 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
 /* fonts ends */
 .main-body-color {
   background-color: rgba(246, 246, 249, 1);
@@ -311,6 +336,22 @@ a {
   border: none;
 }
 /* data table style ends*/
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
 /* responsive starts */
 
 @media (min-width: 420) {
