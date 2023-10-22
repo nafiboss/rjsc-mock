@@ -277,30 +277,17 @@ class ShareHolderDetailsForm extends BaseForm {
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-3">'
         + '                 <label class="form-label font-label">1. Name <span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your entity name"/>'
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter your entity name"/>'
+        + '             </div>'
+        + '         </div>'
+        +  '        <div class="col-md-6">'
+        + '             <div class="d-flex flex-column mb-3"> &nbsp;'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
-        + '         <div class="d-flex flex-column w-100">'
-        + '             <label htmlFor="exampleInputEmail1" class="form-label font-label">2. Entity Type</label>'
-        + '             <select class="form-select plc reg-form-input form-control entityType">'
-        + '               <option class="plc">Choose Any</option>'
-        + '               <option value="11">Private Company</option>'
-        + '               <option value="9">Public Company</option>'
-        + '               <option value="1">Trade Organization</option>'
-        + '               <option value="2">Foreign Company</option>'
-        + '               <option value="3">Society</option>'
-        + '               <option value="4">Partnership Firm</option>'
-        + '               <option value="5">Company Under Section 28</option>'
-        + '               <option value="6">Company Under Section 29</option>'
-        + '               <option value="7">One Person Company</option>'
-        + '             </select>'
-        + '         </div>'
-        + '     </div>'
-        + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-3">'
         + '                 <label class="form-label font-label">3. BIN/TIN no<span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your BIN/TIN no"/>'
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter your BIN/TIN no"/>'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
@@ -312,7 +299,7 @@ class ShareHolderDetailsForm extends BaseForm {
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-3">'
         + '                 <label class="form-label font-label">5. Trade License no <span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your Trade License no"/>'
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter your Trade License no"/>'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
@@ -324,7 +311,7 @@ class ShareHolderDetailsForm extends BaseForm {
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-3">'
         + '                 <label class="form-label font-label">7. VAT Registration no <span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control name" placeholder="Enter your VAT Registration no"/>'
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter your VAT Registration no"/>'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
@@ -582,6 +569,7 @@ class ShareHolderDetailsForm extends BaseForm {
       html += '<th>Type</th>';
       html += '<th>No of Share</th>';
       html += '<th>Chose Direcrtor</th>';
+      html += '<th>Entity Admin</th>';
       html += '<th></th>';
       html += '</tr>';
       html += '</thead>';
@@ -595,6 +583,7 @@ class ShareHolderDetailsForm extends BaseForm {
         html += '<td>'+ item.type +'</td>';
         html += '<td><input type="text" class="form-control plc"/></td>';
         html += '<td><input type="checkbox" class="form-control form-check-input" style="height:2em;"/></td>';
+        html += '<td><input type="radio" name="isAdmin" class="form-control form-check-input" style="height:2em;"/></td>';
         html += '<td>';
         html += '<button class="btn btn-sm btn-outline-success"><i class="fa fa-list me-1" data-id="'+ item.id +'"></i>View</button>';
         html += '<button class="btn btn-sm btn-outline-primary ms-1"><i class="fa fa-edit me-1" data-id="'+ item.id +'"></i>Edit</button>';

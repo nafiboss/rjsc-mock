@@ -47,6 +47,9 @@ class EntityTypeForm extends BaseForm {
     console.log('Event binding....: Entity type form');
     $(document).on('change', '.entityType', function(){
       console.log("SMNLOG val: "+ $(this).val());
+      if($(this).val() == '11') {
+        $('.moaLiabilitySelect').val('11');
+      }
     });
   }
 

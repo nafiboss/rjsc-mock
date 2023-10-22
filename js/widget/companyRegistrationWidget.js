@@ -65,13 +65,6 @@ $.widget("obrs.companyRegistrationWidget", {
                 ]
             },
             {
-                "code": "QUALIFIED_SHARES_FORM",
-                "header": "Qualified Shares Info",
-                "subHeader": "",
-                "question": "What's you entity type?",
-                "itemList": []
-            },
-            {
                 "code": "SHARE_HOLDER_FORM",
                 "header": "Share Holder details",
                 "subHeader": "",

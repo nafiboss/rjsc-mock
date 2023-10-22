@@ -33,14 +33,8 @@ class ShareHolderPositionForm extends BaseForm {
         + '         </div>'
         + '         <div class="col-md-6 minNoOfQuorumDiv" style="display: none;">'
         + '             <div class="d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">2. Quorum of Board of Directors Meeting<span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Quorum of Board of Directors Meeting"/>'
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-6 minNoOfQuorumDiv" style="display: none;">'
-        + '             <div class="d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">3. Quorum of AGM/EGM<span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Quorum of AGM/EGM"/>'
+        + '                 <label class="form-label font-label">2. Minimum no of Quorum <span class="red">*</span></label>'
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter minimum no of quorum"/>'
         + '             </div>'
         + '         </div>'
         + '        <div class="d-flex gray-bg p-2 w-100 justify-content-between mb-4">'
@@ -91,8 +85,6 @@ class ShareHolderPositionForm extends BaseForm {
       multiple:true,
       placeholder: 'Select director, You can select multiple'
     });
-
-    $('.directorMultiSelect').select2().attr('val', [1,2,3]);
 
     $('.managingDirectorMultiSelect').select2({
       multiple:true,

@@ -33,14 +33,7 @@ class BusinessObjectForm extends BaseForm {
       html += super.getStepFormHeader(this.header);
     }
 
-    html +=  '<br/><div class="col-md-6 offset-md-3">'
-    + '             <div class="d-flex flex-column mb-4">'
-    + '                 <label class="form-label font-label">1. MOA Type <span class="red">*</span></label>'
-    +                   Obrs.APP.getCommonSelectBox(this.moaTypeList, 'moaTypeSelect', '')
-    + '             </div>'
-    + '         </div>';
-
-    html += '<div id="business-objective-selection" class="show-selection" style="display: none;">'
+    html += '<div id="business-objective-selection" class="show-selection">'
     html += super.getStepFormSubHeader(this.subHeader);
 
     html += '    <div class="row p-4">'
@@ -60,6 +53,12 @@ class BusinessObjectForm extends BaseForm {
         + '             <div class="d-flex flex-column w-100 mb-4">'
         + '                 <label class="form-label font-label">3. Group <span class="red">*</span></label>'
         +                   Obrs.APP.getCommonSelectBox([], this.moaGroupName, '')
+        + '             </div>'
+        + '         </div>'
+        + '          <div class="col-md-6">'
+        + '             <div class="d-flex flex-column w-100 mb-4">'
+        + '                 <label class="form-label font-label">4. Class <span class="red">*</span></label>'
+        +                   Obrs.APP.getCommonSelectBox([], this.moaClassName, '')
         + '             </div>'
         + '         </div>'
         + '     </div>'
