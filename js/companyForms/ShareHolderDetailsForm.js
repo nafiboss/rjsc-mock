@@ -245,11 +245,19 @@ class ShareHolderDetailsForm extends BaseForm {
         + "                 <label class='form-label font-label'>National ID<span class='red'>*</span></label>"
         + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your national id"/>'
         + '             </div>'
+        + '            <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>Date of Birth<span class='red'>*</span></label>"
+        + '                 <input type="date" name="dob" class="dob form-control plc" placeholder="Choose date of birth"/>'
+        + '             </div>'
         + '   </div>'
         + '   <div class="col-md-6 nid-passport foreign" style="display:none">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
         + "                 <label class='form-label font-label'>Passport No<span class='red'>*</span></label>"
         + '                 <input type="text" class="plc reg-form-input form-control nationalIdOrPassport" placeholder="Enter your passport no"/>'
+        + '             </div>'
+       +  '             <div class="d-flex flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>Date of Birth<span class='red'>*</span></label>"
+        + '                 <input type="date" name="dob" class="dob form-control plc" placeholder="Choose date of birth"/>'
         + '             </div>'
         + '   </div>'
         + '   <div class="col-md-6 nid-passport local corporate" style="display:none">'
@@ -432,12 +440,6 @@ class ShareHolderDetailsForm extends BaseForm {
         + '             <div class="d-flex flex-column w-100 mb-3">'
         + "                 <label class='form-label font-label'>8. Original Nationality if different</label>"
         + '                 <input type="text" class="plc reg-form-input form-control originalNationality" placeholder="Original Nationality"/>'
-        + '             </div>'
-        + '         </div>'
-        + '         <div class="col-md-6">'
-        + '             <div class="d-flex flex-column w-100 mb-3">'
-        + "                 <label class='form-label font-label'>9. Date of Birth<span class='red'>*</span></label>"
-        + '                 <input type="date" name="dob" class="dob form-control plc" placeholder="Choose date of birth"/>'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
