@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../src/css/common.css" />
+    <link rel="stylesheet" href="../../src/css/payment.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="d-flex flex-row px-60 py-18 justify-content-between">
+        <div class="d-flex align-content-between">
+          <img
+            src="../images/govt.png"
+            class="rounded mx-auto d-block"
+            alt="nav govt logo"
+          />
+          <span class="d-flex ps-4 me-4 border-end"></span>
+          <img
+            src="../images/ebrs-logo.png"
+            class="rounded mx-auto d-block"
+            alt="nav erbs logo"
+          />
+        </div>
+        <div class="d-flex">
+          <div class="d-flex profile-img">
+            <img
+              src="../images/avatar.png"
+              class="rounded mx-auto d-block"
+              alt="nav erbs logo"
+            />
+          </div>
+          <div class="dropdown d-flex flex-column">
+            <button
+              class="btn btn-secondary dropdown-toggle font-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              MD. Reza Uddin
+            </button>
+
+            <ul class="dropdown-menu p-3">
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Password reset</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Signout</a>
+              </li>
+            </ul>
+            <span class="font-label text-secondary ps-2"
+              >Assistant Registrar</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid dark-blue-bg">
+      <div class="row py-4 px-60">
+        <div class="col-md-6">
+          <div class="d-flex">
+            <a
+              href="./task-dealing.html"
+              class="d-flex py-2 px-3 gap-2 align-items-center custom-radius border border-white"
+            >
+              <i class="fa-solid fa-arrow-left" style="color: #fff"></i>
+              <button
+                type="button"
+                class="font-label border-0 bg-transparent text-white"
+              >
+                Go back
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center justify-content-start">
+            <div class="fs-24-38-500 text-white">Invoice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-white">
+      <div class="row my-5">
+        <div class="col-md-4 offset-md-4 justify-content-center">
+          <div class="d-flex border border-1 flex-column rounded-top">
+            <div class="row p-4">
+              <div class="d-flex gap-4">
+                <div class="d-flex">
+                  <img src="../images/govt.png" alt="govt logo" />
+                </div>
+                <div class="d-flex flex-column">
+                  <div class="font-label text-secondary">
+                    Governments of republic of Bangladesh
+                  </div>
+                  <div class="fs-18-28-700">
+                    Register of Joint Stock Companies and Firms Payment
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row p-4">
+              <div class="col-md-12">
+                <div class="d-flex w-100 flex-column gap-3 my-4">
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Submission No</div>
+                    <div class="font-label">2518484151</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Submission date</div>
+                    <div class="font-label">24-Aug-2023</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Submission by</div>
+                    <div class="font-label">MD. Jahangir Kabir</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Entity name</div>
+                    <div class="font-label">Mayer doya biriyani</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Entity type</div>
+                    <div class="font-label">Private Company</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Submission for</div>
+                    <div class="font-label">Registration</div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <div class="font-label">Registration office</div>
+                    <div class="font-label">Dhaka</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="fs-18-28-700">Payment Details</div>
+                  </div>
+                  <div class="d-flex flex-column bg-light py-3 gap-3 px-2">
+                    <div class="d-flex justify-content-between">
+                      <div class="font-label">Registration fee</div>
+                      <div class="font-label">17,025.00 BDT</div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div class="font-label">Registration filing fee</div>
+                      <div class="font-label">1,200.00 BDT</div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div class="font-label">
+                        Certificate copy MOA(1)+XII(1)
+                      </div>
+                      <div class="font-label">600</div>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between border-top border-1"
+                    >
+                      <div class="font-label">Total amount</div>
+                      <div class="font-label">18,825.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row rounded-bottom">
+              <div class="d-flex justify-content-between">
+                <div
+                  href="./task-dealing.html"
+                  class="d-flex py-2 px-3 gap-2 align-items-center close-btn-background w-50 justify-content-center"
+                >
+                  <i
+                    class="fa-solid fa-cloud-arrow-down"
+                    style="color: #000000"
+                  ></i>
+                  <button
+                    type="button"
+                    class="font-label border-0 bg-transparent text-black"
+                  >
+                    Download payment slip
+                  </button>
+                </div>
+                <div
+                  href="./task-dealing.html"
+                  class="d-flex py-2 px-3 gap-2 align-items-center bg-primary w-50 justify-content-center"
+                >
+                  <a
+                    href="./card.html"
+                    type="button"
+                    class="font-label border-0 bg-transparent text-white"
+                  >
+                    Pay online
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid dark-blue-bg">
+      <div class="d-flex align-items-center justify-content-center py-4">
+        <div class="font-label text-white">
+          Design & Development: Development Design Consultants Ltd.
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  </body>
+</html>

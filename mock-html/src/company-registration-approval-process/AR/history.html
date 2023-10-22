@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/registration-approval-process.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="d-flex flex-row px-60 py-18 justify-content-between">
+        <div class="d-flex align-content-between">
+          <img
+            src="../../../src/images/govt.png"
+            class="rounded mx-auto d-block"
+            alt="nav govt logo"
+          />
+          <span class="d-flex ps-4 me-4 border-end"></span>
+          <img
+            src="../../../src/images/ebrs-logo.png"
+            class="rounded mx-auto d-block"
+            alt="nav erbs logo"
+          />
+        </div>
+        <div class="d-flex">
+          <div class="d-flex profile-img">
+            <img
+              src="../../../src/images/avatar.png"
+              class="rounded mx-auto d-block"
+              alt="nav erbs logo"
+            />
+          </div>
+          <div class="dropdown d-flex flex-column">
+            <button
+              class="btn btn-secondary dropdown-toggle font-btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              MD. Reza Uddin
+            </button>
+
+            <ul class="dropdown-menu p-3">
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Password reset</a>
+              </li>
+              <li class="d-flex align-items-center">
+                <img
+                  src="../../../src/images/icon.png"
+                  class="rounded mx-auto d-block setting-icon"
+                  alt="nav erbs logo"
+                />
+                <a class="dropdown-item" href="#">Signout</a>
+              </li>
+            </ul>
+            <span class="font-label text-secondary ps-2"
+              >Assistant Registrar</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-gray">
+      <div class="row">
+        <div class="col-md-2 bg-white">
+          <div class="d-flex flex-column border-top p-4">
+            <ul class="list-inline" id="registration-left-menu-link">
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <img
+                    src="../../images/common/common-menu-icon.png"
+                    alt="left menu image"
+                  />
+                  <div class="text-primary">New Registration</div>
+                </div>
+                <div class="list-group pt-4 ps-3 new-registration-link">
+                  <a
+                    href="./application-list.html"
+                    class="list-group-item list-group-item-action border-0"
+                    aria-current="true"
+                    ><i class="fa-solid fa-circle fa-2xs"></i>
+
+                    Applications
+                  </a>
+
+                  <a
+                    href="./history.html"
+                    class="list-group-item list-group-item-action active border-0"
+                  >
+                    <i class="fa-solid fa-circle fa-2xs"></i>
+                    History</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  data-bs-toggle="collapse"
+                  href="#collapseExample"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >
+                  <img
+                    src="../../images/common/common-menu-icon.png"
+                    alt="left menu image"
+                  />
+                  <div class="text-black">Return submission</div>
+                </div>
+                <div
+                  class="collapse pt-4 ps-4 new-registration-link"
+                  id="collapseExample"
+                >
+                  <ul class="list-group">
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                      aria-current="true"
+                      ><i class="fa-solid fa-circle fa-2xs"></i>
+
+                      Submission one
+                    </a>
+
+                    <a
+                      href="#"
+                      class="list-group-item list-group-item-action border-0"
+                    >
+                      <i class="fa-solid fa-circle fa-2xs"></i>
+                      Submission two</a
+                    >
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Name search</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Invoice</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="" class="d-flex gap-3">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">Report</div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="bg-white d-flex align-items-center gap-3"
+                  role="button"
+                >
+                  <a href="./portal.html" class="d-flex gap-3 text-black">
+                    <img
+                      src="../../images/common/common-menu-icon.png"
+                      alt="left menu image"
+                    />
+                    <div class="black-text">My portal</div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-10 p-24">
+          <div class="bg-white custom-radius p-24">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-12 p-4">
+                    <div
+                      class="d-flex pb-4 justify-content-between border-bottom border-1"
+                    >
+                      <div class="fs-20b">History</div>
+                      <div class="d-flex">
+                        <div class="input-group">
+                          <div class="form-group has-search">
+                            <span
+                              class="fa fa-search form-control-feedback"
+                            ></span>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Enter case id or name"
+                            />
+                          </div>
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary bg-primary text-white font-label"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row pb-4">
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Application Type</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Status</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Submission ID</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Choose date</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="choose"
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 py-2">
+                          <button type="button" class="btn bg-transparent">
+                            Today
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Yesterday
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Last week
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Last month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Three month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            Six month
+                          </button>
+                          <button type="button" class="btn bg-transparent">
+                            One year
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column gap-4">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Entity type</label
+                        >
+                      </div>
+                      <div class="col-md-8">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected>Choose</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 d-flex gap-4 justify-content-end">
+                        <button
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent"
+                        >
+                          <div class="">
+                            <i
+                              class="fa-solid fa-xmark"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                          <div class="text-primary font-label">Clear all</div>
+                        </button>
+                        <button
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-primary"
+                        >
+                          <div class="">
+                            <i
+                              class="fa-solid fa-check"
+                              style="color: #fff"
+                            ></i>
+                          </div>
+                          <div class="text-white font-label">Apply</div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex rounded p-2">
+              <div class="col-md-12">
+                <table
+                  id="example"
+                  class="table table-striped table-bordered"
+                  style="width: 100%"
+                >
+                  <thead>
+                    <tr>
+                      <th>Company Name</th>
+                      <th>Registration Type</th>
+                      <th>Submission ID</th>
+                      <th>Organization type</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th class="d-flex justify-content-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <button
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href=""
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">Recall</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-rotate-left"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Return submission</td>
+                      <td>121545</td>
+                      <td>Private company</td>
+                      <td>08/05/23 03:05 PM</td>
+                      <td>Forwarded by examiner</td>
+                      <td class="d-flex justify-content-end">
+                        <a
+                          href="./task-dealing.html"
+                          class="border border-primary rounded d-flex gap-2 px-4 py-2 bg-transparent action-btn"
+                        >
+                          <div class="text-primary font-label">View</div>
+                          <div class="">
+                            <i
+                              class="fa-solid fa-eye"
+                              style="color: #1952f4"
+                            ></i>
+                          </div>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination d-flex justify-content-center">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&#60;</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&#62;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        new DataTable("#example");
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+  </body>
+</html>

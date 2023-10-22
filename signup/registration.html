@@ -161,17 +161,18 @@
                             />
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="passport-scan" style="display: none;">
                         <div class="mb-6 col">
                             <label for="exampleInputEmail1" class="form-label font-label"
-                            >Email</label
+                            >Upload scan copy of your passport</label
                             >
                             <input
-                                    type="email"
+                                    type="file"
                                     class="form-control plc"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter your email"
                             />
+                            <br/>
                         </div>
                     </div>
                     <div class="row">
@@ -213,7 +214,9 @@
 </body>
 <script>
     $(document).ready(function() {
+      $('#passport-scan').hide();  
       $('#local').on('click', function() {
+        $('#passport-scan').hide();
         $('#nid-passport').text('NID Number');
         $('#nid').text('Please provide a valid NID number');
       });
@@ -221,6 +224,7 @@
       $('#foreign').on('click', function() {
         $('#nid-passport').text('Passport Number');
         $('#nid').text('Please provide a valid Passport number');
+        $('#passport-scan').show();    
       });
     });
 </script>
