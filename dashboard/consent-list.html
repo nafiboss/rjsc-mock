@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Parcel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+  </head>
+  <body>
+    <div class="container-fluid bg-white">
+      <div class="py-18">
+        <div class="row">
+          <div class="col-md-2 border-end border-1 p-0">
+            <div class="d-flex align-content-between">
+              <img
+                src="../images/govt.png"
+                class="rounded mx-auto d-block"
+                alt="nav govt logo"
+              />
+              <span class="d-flex ps-4 me-4 border-end"></span>
+              <img
+                src="../images/ebrs-logo.png"
+                class="rounded mx-auto d-block"
+                alt="nav erbs logo"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="d-flex justify-content-between">
+              <div class="d-flex">
+                <h2 class="">Dashboard</h2>
+              </div>
+              <div class="d-flex gap-4">
+                <button
+                  type="button"
+                  class="btn pb-0 header-background position-relative rounded-circle notification-badge"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i
+                    class="fa-regular fa-bell fa-sm"
+                    style="color: #000000"
+                  ></i>
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >
+                    4
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+                <div class="d-flex profile-img">
+                  <img
+                    src="../images/avatar.png"
+                    class="rounded mx-auto d-block"
+                    alt="nav erbs logo"
+                  />
+                </div>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle font-btn"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Nusrat Jahan
+                  </button>
+                  <ul class="dropdown-menu p-3">
+                    <li class="d-flex align-items-center">
+                      <img
+                        src="../images/icon.png"
+                        class="rounded mx-auto d-block setting-icon"
+                        alt="nav erbs logo"
+                      />
+                      <a class="dropdown-item" href="#">My profile</a>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <img
+                        src="../images/icon.png"
+                        class="rounded mx-auto d-block setting-icon"
+                        alt="nav erbs logo"
+                      />
+                      <a class="dropdown-item" href="#">Password reset</a>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <img
+                        src="../images/icon.png"
+                        class="rounded mx-auto d-block setting-icon"
+                        alt="nav erbs logo"
+                      />
+                      <a class="dropdown-item" href="/signup/login.html">Signout</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-gray">
+      <div class="row main-content">
+        <div class="col-md-2 pe-4">
+          <div
+            class="d-flex border-top px-2 py-5 flex-column gap-4 bg-white left-wrapper"
+          >
+            <div class="row d-flex flex-column gap-2 px-3">
+              <div class="d-flex gap-2 py-3 left-link">
+                <img
+                  src="../images/dashboard/dashboard.png"
+                  alt="dashboard image"
+                />
+                <a href="./user-dashboard.html" class="left-menu-link"
+                  >Dashboard</a
+                >
+              </div>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header d-flex border-0" id="companies">
+                    <img
+                      src="../images/dashboard/activity.svg"
+                      alt="dashboard image"
+                    />
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="activities"
+                    >
+                      My companies
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="activities"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0">
+                      <div class="list-group ps-4">
+                        <a
+                          href="./company-dashboard.html"
+                          class="list-group-item border-0"
+                          >Khan Ceramics</a
+                        >
+                        <a href="#" class="list-group-item border-0"
+                          >Amber IT</a
+                        >
+                        <a href="#" class="list-group-item border-0"
+                          >Mayer Doa Biriani House</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header d-flex border-0" id="activities">
+                    <img
+                      src="../images/dashboard/activity.svg"
+                      alt="dashboard image"
+                    />
+                    <button
+                      class="accordion-button collapsed text-primary"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="activities"
+                    >
+                      My activities
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="activities"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0">
+                      <div class="list-group ps-4">
+                        <a
+                          href="./my-application.html"
+                          class="list-group-item border-0 active"
+                          >My application
+                          <span class="badge rounded-pill bg-danger">4</span></a
+                        >
+                        <a
+                          href="./client-invoice.html"
+                          class="list-group-item border-0"
+                          >Invoice</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header d-flex border-0" id="headingTwo">
+                    <img
+                      src="../images/dashboard/resource.svg"
+                      alt="dashboard image"
+                    />
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Resource
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0">
+                      <ul class="list-group ps-4">
+                        <li class="list-group-item border-0">Entity Acts</li>
+                        <li class="list-group-item border-0">
+                          Registration Fees
+                        </li>
+                        <li class="list-group-item border-0">Guidelines</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex gap-2 py-3 left-link">
+                <img
+                  src="../images/dashboard/name-check.svg"
+                  alt="dashboard image"
+                />
+                <a href="/mock-html/src/dashboard/user-dashboard-entity-name-search.html" class="left-menu-link">Name check</a>
+              </div>
+              <div class="d-flex gap-2 py-3 left-link">
+                <img
+                  src="../images/dashboard/name-clearance.svg"
+                  alt="dashboard image"
+                />
+                <a href="/mock-html/src/dashboard/name-clear-request.html" class="left-menu-link">Name clearance request</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 pe-4">
+          <div class="bg-white rounded p-4">
+            <div class="row p-3 border border-warning custom-radius">
+              <div class="col-md-11">
+                <div class="d-flex gap-3 align-items-center">
+                  <i class="fa-solid fa-flag" style="color: #ffa500"></i>
+                  <div class="font-label">
+                    You have some changes to approve your business
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1 justify-items-end">
+                <a
+                  href="/dashboard/application-comment-section.html"
+                  type="button"
+                  class="d-flex align-items-center gap-2"
+                >
+                  <div class="font-label">open</div>
+                  <i class="fa-solid fa-arrow-right" style="color: #000"></i>
+                </a>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-md-12 bg-white">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="d-flex p-4 justify-content-between">
+                      <div class="fs-20b">Shareholders consent list</div>
+                      <div class="d-flex">
+                        <div class="input-group">
+                          <input
+                            type="search"
+                            class="form-control rounded"
+                            placeholder="Enter case ID or Name"
+                            aria-label="Search"
+                            aria-describedby="search-addon"
+                          />
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary bg-primary text-white font-label"
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-flex rounded p-4">
+                  <div class="col-md-12">
+                   <img src="../images/consent-list.png" style="width: -webkit-fill-available;"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination d-flex justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- notification Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column gap-4">
+            <div
+              class="d-flex border-bottom border-1 pb-4 justify-content-center align-items-center justify-content-between"
+            >
+              <div class="d-flex flex-column">
+                <span class="font-label">File uploaded</span>
+                <span class="font-label text-secondary"
+                  >Your file has successfully been uploaded</span
+                >
+              </div>
+              <span class="font-label text-secondary">1 day</span>
+              <a
+                href="./application-comment-section.html"
+                type="button"
+                class="btn btn-primary"
+                >Details</a
+              >
+            </div>
+            <div
+              class="d-flex justify-content-center align-items-center justify-content-between"
+            >
+              <div class="d-flex flex-column">
+                <span class="font-label">File uploaded</span>
+                <span class="font-label text-secondary"
+                  >Your file has successfully been uploaded</span
+                >
+              </div>
+              <span class="font-label text-secondary">1 day</span>
+              <a
+                href="./application-comment-section.html"
+                type="button"
+                class="btn btn-primary"
+                >Details</a
+              >
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">View All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/js/bootstrap.bundle.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
