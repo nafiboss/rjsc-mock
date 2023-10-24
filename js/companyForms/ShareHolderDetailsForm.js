@@ -97,13 +97,18 @@ class ShareHolderDetailsForm extends BaseForm {
       self.shareHolderList.push(
           {
             "id": self.shareholderCounter++ ,
-            "name": self._getElementByClass('name').val() ,
+            "name": self._getElementByClass('companyName').val() || self._getElementByClass('name').val() ,
             "type": self.shareHolderType + " " + self.localOrForeign,
             "noOfShare": 15
           }
           );
       self._reloadShareHolderTable();
       self._getElementByClass('personDetailsModal').modal('hide');
+      $('.shareHolderTypeSelect').val("0");
+
+      self._getElementByClass('nid-passport').hide();
+      self._getElementByClass('shareholder-details-form').hide();
+      self._getElementByClass('entity-details-form').hide();
     });
 
     $(document).on('click', '.'+ this.addShareHolderBtnClassName, function(){
@@ -149,6 +154,7 @@ class ShareHolderDetailsForm extends BaseForm {
 
         self._getElementByClass('nid-passport').hide();
         self._getElementByClass('shareholder-details-form').hide();
+        self._getElementByClass('entity-details-form').hide();
         if(self.shareHolderType == "LOCAL_INDIVIDUAL") {
           self._getElementByClass('nid-passport.local').show(300);
           self._getElementByClass('nid-passport.local.corporate').hide();
@@ -285,7 +291,7 @@ class ShareHolderDetailsForm extends BaseForm {
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column mb-3">'
         + '                 <label class="form-label font-label">1. Name <span class="red">*</span></label>'
-        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Enter your entity name"/>'
+        + '                 <input type="text" class="plc reg-form-input form-control companyName" placeholder="Enter your entity name"/>'
         + '             </div>'
         + '         </div>'
         +  '        <div class="col-md-6">'

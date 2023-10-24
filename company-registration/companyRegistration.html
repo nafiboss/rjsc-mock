@@ -244,6 +244,7 @@
     <script type="text/javascript" src="../js/companyForms/PreviewForm.js"></script>
     <script type="text/javascript" src="../js/companyForms/WitnessForm.js"></script>
     <script type="text/javascript" src="../js/widget/companyRegistrationWidget.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 
 
 <script type="text/javascript">
@@ -286,7 +287,7 @@
         $(document).on('click', '.nextBtn', function(){
             console.log($('.carousel-item.active').data('formCode'));
             if($('.carousel-item.active').data('formCode') == "PREVIEW_FORM") {
-                window.location.pathname = window.pathwindow.urlPathPrefix + "/dashboard/my-application.html";
+                window.location.pathname = window.urlPathPrefix + "/dashboard/my-application.html";
             }
         });
 

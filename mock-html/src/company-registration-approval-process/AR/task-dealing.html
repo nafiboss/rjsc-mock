@@ -23,6 +23,7 @@
     />
     <link rel="stylesheet" href="../../css/common.css" />
     <link rel="stylesheet" href="../../css/registration-approval-process.css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   </head>
   <body>
     <div class="container-fluid bg-white">
@@ -707,24 +708,24 @@
                   </div>
 
                   <div
-                    class="d-flex flex-column my-4 border border-1 custom-radius w-100 justify-content-between"
-                  >
+                    class="flex-column my-4 border border-1 custom-radius w-100 justify-content-between style='display: none;'"
+                  id="back-office">
                     <div
                       class="d-flex mb-4 justify-content-between p-4 forward-to-bg"
                     >
                       <div class="fs-24-38-500 w-30">Forward To</div>
                       <div class="d-flex w-40">
                         <select
-                          class="form-select py-3"
+                          class="form-select py-3 back-office"
                           aria-label="Default select example"
                         >
-                          <option selected class="py-2">
+                          <option selected class="py-2" value="1">
                             Forward to Examinar
                           </option>
-                          <option value="1" class="py-2">
-                            Forward to Clent
+                          <option value="2" class="py-2">
+                            Forward to Applicant
                           </option>
-                          <option value="2" class="py-2">Forward to AR</option>
+                          <option value="3" class="py-2">Forward to AR</option>
                         </select>
                       </div>
                       <div class="d-flex gap-2 align-items-center w-30 ps-4">
@@ -787,24 +788,24 @@
                     </div>
                   </div>
                   <div
-                    class="d-flex flex-column my-4 border border-1 custom-radius w-100 justify-content-between"
-                  >
+                    class="flex-column my-4 border border-1 custom-radius w-100 justify-content-between"
+                  style="display: none;" id="client">
                     <div
                       class="d-flex mb-4 justify-content-between p-4 forward-to-bg"
                     >
                       <div class="fs-24-38-500 w-30">Forward To</div>
                       <div class="d-flex w-40">
                         <select
-                          class="form-select py-3"
+                          class="form-select py-3 client"
                           aria-label="Default select example"
                         >
-                          <option selected class="py-2">
-                            Forward to Client
+                          <option class="py-2" value="1">
+                            Forward to Examinar
                           </option>
-                          <option value="1" class="py-2">
-                            Forward to Clent
+                          <option selected value="2" class="py-2">
+                            Forward to Applicant
                           </option>
-                          <option value="2" class="py-2">Forward to AR</option>
+                          <option value="3" class="py-2">Forward to AR</option>
                         </select>
                       </div>
                       <div class="d-flex gap-2 align-items-center w-30 ps-4">
@@ -948,5 +949,28 @@
       integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function() {
+        $('#back-office').hide();
+        $('#client').hide();
+
+        $('#back-office').show();
+        $('.back-office').on('change', function() {
+          if($(this).val() == "2") {
+            $('#back-office').hide();
+            $('#client').show();
+            $('.client').val($(this).val());
+          }
+        });
+
+        $('.client').on('change', function() {
+          if($(this).val() != "1") {
+            $('#back-office').show();
+            $('#client').hide();
+            $('.back-office').val($(this).val());
+          }
+        });
+      });
+    </script>
   </body>
 </html>
