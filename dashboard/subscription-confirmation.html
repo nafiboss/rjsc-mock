@@ -25,6 +25,7 @@
     />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/dashboard.css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
   </head>
   <body>
     <div class="container-fluid bg-white">
@@ -262,14 +263,14 @@
                   src="../images/dashboard/name-check.svg"
                   alt="dashboard image"
                 />
-                <a href="/mock-html/src/dashboard/user-dashboard-entity-name-search.html" class="left-menu-link">Name check</a>
+                <a href="./user-dashboard-entity-name-search.html" class="left-menu-link">Name check</a>
               </div>
               <div class="d-flex gap-2 py-3 left-link">
                 <img
                   src="../images/dashboard/name-clearance.svg"
                   alt="dashboard image"
                 />
-                <a href="/mock-html/src/dashboard/name-clear-request.html" class="left-menu-link">Name clearance request</a>
+                <a href="./name-clear-request.html" class="left-menu-link">Name clearance request</a>
               </div>
             </div>
           </div>
@@ -280,7 +281,7 @@
               <div class="col-md-12 bg-white">
                 <div class="row d-flex rounded p-4">
                   <div class="col-md-12">
-                   <img src="../images/subscription-confirm.png" style="width: auto; height: auto;"></object>
+                   <img src="../images/subscription-confirm.png" style="width: auto; height: auto;" onclick="location='../signup/otp.html'"></object>
                   </div>
                 </div>
                 
@@ -360,6 +361,76 @@
       </div>
     </div>
 
+
+    <div
+      class="modal fade"
+      id="exampleModal2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      style="top: 200px;"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header dark-green">
+            <div class="d-flex flex-column">
+              <h5 class="modal-title text-white" id="exampleModalLabel">
+                You are about to approve the following submission.
+              </h5>
+              <span class="font-label text-white"
+                >Review details before proceeding.</span
+              >
+            </div>
+
+            <div class="">
+              <i
+                class="fa-solid fa-xmark"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+          <div class="modal-body container p-5">
+            <div class="row">
+              <div class="col-md-12 main-body-color px-2 py-3 mt-3">
+                <div class="d-flex flex-column gap-2">
+                  <label for="exampleFormControlInput1" class="font-label"
+                    >Please confirm password.</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Type the number"
+                  />
+                </div>
+                <div class="d-flex justify-content-end gap-2 pt-4">
+                  <button
+                    type="button"
+                    class="btn close-btn-background"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <div class="d-flex dark-green align-items-center p-2 rounded">
+                    <i
+                      class="fa-solid fa-check-double"
+                      style="color: #ffffff"
+                    ></i>
+                    <button type="button" class="text-white font-label btn" data-bs-dismiss="modal">
+                      Confirm
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -380,5 +451,10 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript">
+      $(window).on('load', function() {
+          $('#exampleModal2').modal('show');
+      });
+  </script>
   </body>
 </html>
