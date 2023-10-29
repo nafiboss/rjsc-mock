@@ -6,6 +6,7 @@
     <title>Bootstrap w/ Parcel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../../../../css/custom/style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -358,16 +359,16 @@
                           <div
                             class="d-flex justify-content-between p-2 custom-border"
                           >
-                            <div class="font-label">1. MOA</div>
+                            <div class="font-label">1. MOA (Memorandum of Association)</div>
                             <div class="d-flex gap-3">
                               <div
                                 class="d-flex gap-2 custom-radius border border-1 p-2 align-items-center"
                               >
                                 <button
                                   type="button"
-                                  class="font-label border-0 bg-transparent"
+                                  class="font-label border-0 bg-transparent moaBtn"
                                 >
-                                  Download
+                                  View
                                 </button>
                                 <i
                                   class="fa-solid fa-cloud-arrow-down"
@@ -387,16 +388,16 @@
                           <div
                             class="d-flex justify-content-between p-2 custom-border"
                           >
-                            <div class="font-label">2. MOA</div>
+                            <div class="font-label">2. AOA (Articles of Association)</div>
                             <div class="d-flex gap-3">
                               <div
                                 class="d-flex gap-2 custom-radius border border-1 p-2 align-items-center"
                               >
                                 <button
                                   type="button"
-                                  class="font-label border-0 bg-transparent"
+                                  class="font-label border-0 bg-transparent aoaBtn"
                                 >
-                                  Download
+                                  View
                                 </button>
                                 <i
                                   class="fa-solid fa-cloud-arrow-down"
@@ -943,6 +944,136 @@
       </div>
     </div>
 
+    <div class="modal fade moaPreviewModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+      <div class="modal-header p-4">
+      <div class="modal-title" id="exampleModalLabel">
+      <button type="button" class="close modal-btn modalCloseBtn" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      &nbsp;
+      &nbsp;
+      </div>
+      </div>
+      <div class="modal-body p-4 pb-1" style="height: 700px; overflow-y: scroll;">
+      <div class="moaPreview">
+        <div class="py-4 px-120 shadow bg-white modelAoaWrapperDiv text-align-center rounded border" style="">     
+          <img src="/images/sampleAoa/aoa-01.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-0222.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-03.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-04.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-05.png" class="aoaImg">     
+          <img src="/images/sampleAoa/aoa-06.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-07.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-08.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-09.png" class="aoaImg" style="margin-left: 2px;">      
+          <img src="/images/sampleAoa/aoa-10.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-11.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-12.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-13.png" class="aoaImg">     
+          <img src="/images/sampleAoa/aoa-14.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-15.png" class="aoaImg">     
+          <img src="/images/sampleAoa/aoa-16.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-17.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-18.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-19.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-20.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-21.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-22.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-23.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-24.png" class="aoaImg">      
+          <img src="/images/sampleAoa/aoa-25.png" class="aoaImg">     
+          <img src="/images/sampleAoa/aoa-26.png" class="aoaImg">      
+  </div>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-outline-warning modalCloseBtn" data-dismiss="modal"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</button>
+      </div>
+      </div>
+      </div>
+      </div>
+
+    <div class="modal fade moaPreviewModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+      <div class="modal-header p-4">
+      <div class="modal-title" id="exampleModalLabel">
+      <button type="button" class="close modal-btn modalCloseBtn" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+      <h5 class="bold">Particulars of individual Subscriber/Director/Manager/Managing Agent</h5>
+      <h6 class="gray">(as of memorandum of Articles of Association, Form-IX, X, XII)</h6>
+      </div>
+      </div>
+      <div class="modal-body p-4 pb-1" style="height: 700px; overflow-y: scroll;">
+      <div class="moaPreview">
+
+      <div class="moa-preview-form p-4 pt-0 rounded border">
+      <div class="justify-content-center pt-3">
+              <div class="all-label text-align-center">THE COMPANIES ACT, 1994</div>
+              <div class="all-label text-align-center">( ACT XVIII OF 1994 )</div>
+              <div class="all-label text-align-center">( A PRIVATE COMPANY LIMITED BY SHARES )</div>
+              <div class="all-label text-align-center">MEMORANDUM OF ASSOCIATION</div>
+          </div>
+      <table class="moa-preview-table mt-3">
+
+      <tr>
+      <td>1. </td>
+      <td>Growing of other non-perennial cropsThis class includes the growing of non-perennial crops not elsewhere classified. This class includes: - growing of swedes, mangolds, fodder roots, clover, alfalfa, sainfoin, maize and other grasses, forage kale and similar forage products - growing of beet seeds (excluding sugar beet seeds) and seeds of forage plants</td>
+      </tr>
+
+      <tr>
+      <td>2. </td>
+      <td>Growing of grapesThis class includes: - growing of wine grapes and table grapes in vineyards</td>
+      </tr>
+
+      <tr>
+      <td>3. </td>
+      <td>Growing of tropical and subtropical fruitsThis class includes the growing of tropical and sub-tropical fruit: such as avocados, babanas and plantains, dates, figs, mangoes, papayas, paineapples, other tropical and subtropical fruits (Guava, Kadbel, Jacfruit, Littchi, Sofeda).</td>
+      </tr>
+
+      <tr>
+      <td>4. </td>
+      <td>Growing of citrus fruitsThis class includes such as: - growing of citrus fruits such as: grapefruit and pomelo, lemons and limes , oranges, tangerines, mandarins and clementines, other citrus fruits, wood apple.</td>
+      </tr>
+
+      <tr>
+      <td>5. </td>
+      <td>Growing of beverage crops (Tea, coffee)This class includes: - growing of beverage crops: coffee, tea, maté, cocoa, other beverage crops</td>
+      </tr>
+
+      <tr>
+      <td>6. </td>
+      <td>Growing of spices, aromatic, drug and pharmaceutical cropsThis class includes: - growing of perennial and non-perennial spices and aromatic crops such as: pepper (piper spp.) green chilis and peppers (capsicum spp.), nutmeg, mace and cardamoms, anise, baidan and fennel, cinnamon (canella), cloves. Ginger, vanilla, hops, garlic, onion cassifa leaf, black curmin, mathi, jayan, coriander seed, curmin seed, other spices aromatic crops. - growing of drug and narcotic crops - growing of plants used primarily in perfumery, in pharamacy or for insecticidal, fungicidal or similar purposes.</td>
+      </tr>
+
+      <tr>
+      <td>7. </td>
+      <td>General trading, indenting, importing, procuring, exporting, buyingTo carry on the business of general trading, indenting, importing, procuring, exporting, buying, selling, distributing, retailing, exchanging, converting, altering, leasing, processing, or otherwise handling all types and kinds of goods and services and activities required and/or incidental for the attainment of the above objectives in Bangladesh and abroad.</td>
+      </tr>
+
+      <tr>
+      <td>8. </td>
+      <td>Growing of grapesThis class includes: - growing of wine grapes and table grapes in vineyards</td>
+      </tr>
+
+      <tr>
+      <td>9. </td>
+      <td>Partnership, Jointventure,take over or Amalgamate with any other company and also to take Loans from Bank/other Financial Institutions.To attain the business objectives company may enter into Partnership, Jointventure,take over or Amalgamate with any other company and also to take Loans from Bank/other Financial Institutions in such a manner as may company thinks fit.</td>
+      </tr>
+
+      </table>
+
+      </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-outline-warning modalCloseBtn" data-dismiss="modal"><i class="fa fa-download"></i>&nbsp;&nbsp;Download</button>
+      </div>
+      </div>
+      </div>
+      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
@@ -970,6 +1101,20 @@
             $('.back-office').val($(this).val());
           }
         });
+
+        $('.moaBtn').on('click', function(){
+          $('.moaPreviewModal').modal('show');
+        });
+
+        $('.aoaBtn').on('click', function(){
+          $('.moaPreviewModal1').modal('show');
+        });
+    $('.modalCloseBtn').on('click', function (e) {
+      console.log("SMNLOG :: ========== moaPreviewBtn =========");
+      $('.moaPreviewModal').modal('hide');
+      $('.moaPreviewModal1').modal('hide');
+    });
+
       });
     </script>
   </body>
