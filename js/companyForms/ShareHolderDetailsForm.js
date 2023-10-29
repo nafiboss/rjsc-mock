@@ -158,9 +158,11 @@ class ShareHolderDetailsForm extends BaseForm {
         if(self.shareHolderType == "LOCAL_INDIVIDUAL") {
           self._getElementByClass('nid-passport.local').show(300);
           self._getElementByClass('nid-passport.local.corporate').hide();
+          self._getElementByClass('nid-passport.foreign').hide();
         } else if (self.shareHolderType == "FOREIGN_INDIVIDUAL") {
           self._getElementByClass('nid-passport.foreign').show(300); 
           self._getElementByClass('nid-passport.foreign.corporate').hide(); 
+          self._getElementByClass('nid-passport.local').hide();
         } else if(self.shareHolderType == "LOCAL_CORPORATE") {
           self._getElementByClass('nid-passport.local.corporate').show(300);
         } else if(self.shareHolderType == "FOREIGN_CORPORATE") {
@@ -185,7 +187,7 @@ class ShareHolderDetailsForm extends BaseForm {
       self.representativeAdded = true;
       self._getElementByClass('entity-details-form').hide();
       self._getElementByClass('shareholder-details-form').hide();
-      self._getElementByClass('nid-passport.local').show(300); 
+      self._getElementByClass('nid-passport.local').show(); 
       self._getElementByClass('nid-passport.local.corporate').hide();
       self._getElementByClass('nid-passport.foreign.corporate').hide();
     });
@@ -449,23 +451,60 @@ class ShareHolderDetailsForm extends BaseForm {
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
-        + '             <div class="d-flex nid-passport local flex-column w-100 mb-3" style="display:none!important">'
-        + "                 <label class='form-label font-label'>10. TIN(XXXXXXXXXXXXXXX) (If Required)<span class='red'>*</span></label>"
+        + '             <div class="nid-passport local flex-column w-100 mb-3" style="display:none!important">'
+        + "                 <label class='form-label font-label'>9. TIN(XXXXXXXXXXXXXXX) (If Required)<span class='red'>*</span></label>"
         + '                 <input type="text" class="plc reg-form-input form-control tin" placeholder="Enter your TIN"/>'
+        + '             </div>'
+        + '             <div class="nid-passport foreign flex-column w-100 mb-3" style="display:none!important">'
+        + "                 <label class='form-label font-label'>9. Upload Scan copy of your passport<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control tin" placeholder="Enter your TIN"/>'
         + '             </div>'
         + '         </div>'
         + '         <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
-        + "                 <label class='form-label font-label'>11. Upload your photo<span class='red'>*</span></label>"
+        + "                 <label class='form-label font-label'>10. Upload your photo<span class='red'>*</span></label>"
         + '                 <input type="file" class="plc reg-form-input form-control"/>'
         + '             </div>'
         + '         </div>'
         + '        <div class="col-md-6">'
         + '             <div class="d-flex flex-column w-100 mb-3">'
-        + "                 <label class='form-label font-label'>12. Upload scan copy of your signature<span class='red'>*</span></label>"
+        + "                 <label class='form-label font-label'>11. Upload scan copy of your signature<span class='red'>*</span></label>"
         + '                 <input type="file" class="plc reg-form-input form-control"/>'
         + '             </div>'
-        + '         </div>'  
+        + '         </div>'
+        + '<div class="gray-bg p-2 w-100 justify-content-between nid-passport foreign" style="display:none;">'
+        + '   <span class="all-label">Encashment certificate information</span>'
+        + '</div>'
+        + '    <div class="row p-4 nid-passport foreign"  style="display:none;">'
+        + '       <div class="col-md-6">'
+        + '             <div class="flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>1. Encashment Certificate No. <span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Encashment certificate no"/>'
+        + '             </div>'
+        + '         </div>'
+        + '        <div class="col-md-6">'
+        + '             <div class="flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>2. Bank name and Branch information<span class='red'>*</span></label>"
+        + '                 <textarea class="plc reg-form-input form-control" placeholder="Enter your bank name and branch name"></textarea>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>3. Bank account no. <span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Bank account no"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="col-md-6">'
+        + '             <div class="flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>4. Investment amount. <span class='red'>*</span></label>"
+        + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Investment amount"/>'
+        + '             </div>'
+        + '         </div>'
+        + '         <div class="flex-column w-100 mb-3">'
+        + "                 <label class='form-label font-label'>5. Upload Scan copy of your encashement certificate<span class='red'>*</span></label>"
+        + '                 <input type="file" class="plc reg-form-input form-control tin" placeholder="Enter your TIN"/>'
+        + '             </div>'         
+        + '    </div>'    
         + '<div class="d-flex gray-bg p-2 w-100 justify-content-between">'
         + '   <span class="all-label">Usual Residential Address</span>'
         + '</div>'
