@@ -49,7 +49,11 @@ class EntityTypeForm extends BaseForm {
       console.log("SMNLOG val: "+ $(this).val());
       if($(this).val() == '11') {
         $('.moaLiabilitySelect').val('11');
+      } else if($(this).val() == '9') {
+        $('.moaLiabilitySelect').append('<option>Limited by Guarantee</option><option>Unlimited</option>');
       }
+
+      Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = $(this).val();
     });
   }
 

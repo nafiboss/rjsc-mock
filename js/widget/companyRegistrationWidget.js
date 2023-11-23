@@ -65,6 +65,12 @@ $.widget("obrs.companyRegistrationWidget", {
                 ]
             },
             {
+                "code":"BUSINESS_COMMENCEMENT_BUSINESS_FORM",
+                "header":"Declaration before Commencement of Business",
+                "question": "What would be your company name?",
+                "itemList": []
+            },
+            {
                 "code": "SHARE_HOLDER_FORM",
                 "header": "Share Holder details",
                 "subHeader": "",
@@ -227,6 +233,9 @@ $.widget("obrs.companyRegistrationWidget", {
         }else if(stepObject.code === 'PREVIEW_FORM'){
             return new PreviewForm(stepObject.header, stepObject.header);
         }
+        else if(stepObject.code === 'BUSINESS_COMMENCEMENT_BUSINESS_FORM'){
+            return new BusinessDetailsPublic(stepObject.header, stepObject.header);
+        }
     },
     createRightPanel: function(){
         var self = this;
@@ -296,6 +305,17 @@ $.widget("obrs.companyRegistrationWidget", {
                 $('.directorMultiSelect').val([1,2,3]).trigger('change').trigger('select2:select');
             } else if ($(event.relatedTarget).attr('data-form-code') == "MOA_FORM" && Obrs.APP.SELECTED_VALUES.SELECTED_MOA_TYPE) {
                 $(".moaTypeSelect").val(Obrs.APP.SELECTED_VALUES.SELECTED_MOA_TYPE);
+            } else if($(event.relatedTarget).attr('data-form-code') == "COMPANY_NAME_FORM") {
+                $('.non-prvt-entity .prvt-entity').hide();
+                if(Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE != "11") {
+                    $('.non-prvt-entity').show();
+                    $('.prvt-entity').hide();        
+                } else {
+                    $('.prvt-entity').show();
+                    $('.non-prvt-entity').hide();
+                }
+            } else if($(event.relatedTarget).attr('data-form-code') == "BUSINESS_DETAILS_FORM") {
+                if(Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE == "9") {$('.public-limited').show();}
             }
         });
 
