@@ -45,12 +45,19 @@ class EntityTypeForm extends BaseForm {
 
   bindEvents() {
     console.log('Event binding....: Entity type form');
+    $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().removeClass('d-flex').hide();
     $(document).on('change', '.entityType', function(){
       console.log("SMNLOG val: "+ $(this).val());
       if($(this).val() == '11') {
         $('.moaLiabilitySelect').val('11');
+        window.location.pathname = window.urlPathPrefix + "/company-registration/companyRegistration.html";
       } else if($(this).val() == '9') {
-        $('.moaLiabilitySelect').append('<option>Limited by Guarantee</option><option>Unlimited</option>');
+        window.location.pathname = window.urlPathPrefix + "/company-registration/companyRegistrationPublicLimited.html";
+        $('.moaLiabilitySelect').find('option')
+        .remove()
+        .end()
+        .append('<option value="11">Limited by share</option><option>Limited by Guarantee</option><option>Unlimited</option>');
+        $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().addClass('d-flex').show();
       }
 
       Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = $(this).val();

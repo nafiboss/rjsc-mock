@@ -65,6 +65,12 @@ $.widget("obrs.companyRegistrationWidget", {
                 ]
             },
             {
+                "code":"BUSINESS_COMMENCEMENT_BUSINESS_FORM",
+                "header":"Declaration before Commencement of Business",
+                "question": "What would be your company name?",
+                "itemList": []
+            },
+            {
                 "code": "SHARE_HOLDER_FORM",
                 "header": "Share Holder details",
                 "subHeader": "",
@@ -293,6 +299,16 @@ $.widget("obrs.companyRegistrationWidget", {
         });
 
         $('#registration-carousel').on('slide.bs.carousel', function (event) {
+            if(Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE != "9") {
+                if($(event.relatedTarget).attr('data-form-code') == "BUSINESS_COMMENCEMENT_BUSINESS_FORM") {
+                    if(event.direction == "left") {
+                        $('.prevtBtn').trigger('click');
+                    } else {
+                        $('.nextvBtn').trigger('click');
+                    }
+                } 
+            }   
+            
             self.fillCurrentPrevAndNextStep($(event.relatedTarget).attr('data-form-code'));                       
             self.updateStepProgressIcon();
 

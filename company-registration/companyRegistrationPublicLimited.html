@@ -244,7 +244,7 @@
     <script type="text/javascript" src="../js/companyForms/PreviewForm.js"></script>
     <script type="text/javascript" src="../js/companyForms/WitnessForm.js"></script>
     <script type="text/javascript" src="../js/companyForms/BusinessDetailsPublic.js"></script>
-    <script type="text/javascript" src="../js/widget/companyRegistrationWidget.js"></script>
+    <script type="text/javascript" src="../js/widget/companyRegistrationWidgetPublicLimited.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 
 
@@ -284,9 +284,13 @@
                 }, 700);
             }
 
-            $('.entityType').val("11");
-            $('.moaLiabilitySelect').val('11');
-            Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = "11";
+            $('.entityType').val("9");
+            $('.moaLiabilitySelect').find('option')
+            .remove()
+            .end()
+            .append('<option val="0">-- Choose Any --</option><option value="11">Limited by share</option><option>Limited by Guarantee</option><option>Unlimited</option>');
+            $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().addClass('d-flex').show();
+            Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = "9";
         });
 
         $(document).on('click', '.nextBtn', function(){
