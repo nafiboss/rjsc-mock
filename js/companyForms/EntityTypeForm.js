@@ -31,9 +31,9 @@ class EntityTypeForm extends BaseForm {
         + '           <div class="entity"> Entity type is a businesss legal structure, like a corporation or partnership, affecting liability and taxes.</div>'
         + '            </div>'
         + '         </div>'
-        + '          <div class="col-md-6">'
+        + '          <div class="col-md-6 libilitySection">'
         + '             <br/>'
-        + '             <div class="d-flex flex-column w-100">'
+        + '             <div class="flex-column w-100">'
         + '                 <label class="form-label font-label">2. Liability Type<span class="red">*</span></label>'
         +                   Obrs.APP.getCommonSelectBox(this.liabilityTypeList, this.moaLiabilityName, "11")
         + '             </div>'
@@ -60,7 +60,9 @@ class EntityTypeForm extends BaseForm {
         $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().addClass('d-flex').show();
       } else if($(this).val() == '7') {
         window.location.pathname = window.urlPathPrefix + "/company-registration/companyRegistrationOPC.html";
-      } 
+      } else if($(this).val() == '4') {
+        window.location.pathname = window.urlPathPrefix + "/company-registration/companyRegistrationPartnership.html";
+      }
 
       Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = $(this).val();
     });
