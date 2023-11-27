@@ -58,7 +58,9 @@ class EntityTypeForm extends BaseForm {
         .end()
         .append('<option value="11">Limited by share</option><option>Limited by Guarantee</option><option>Unlimited</option>');
         $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().addClass('d-flex').show();
-      }
+      } else if($(this).val() == '7') {
+        window.location.pathname = window.urlPathPrefix + "/company-registration/companyRegistrationOPC.html";
+      } 
 
       Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = $(this).val();
     });

@@ -45,7 +45,7 @@ class BusinessDetailsForm extends BaseForm {
         + '                 <input type="email" class="plc reg-form-input form-control" placeholder="Value of each share "/>'
         + '             </div>'
         + '         </div>'
-        + '         <div class="col-md-6">'
+        + '         <div class="col-md-6 qualified-share" style="display:none;">'
         + '             <div class="d-flex flex-column w-100 mb-4">'
         + '                 <label class="form-label font-label">4. Number of Qualified Shares <span class="red">*</span></label>'
         + '                 <input type="text" class="plc reg-form-input form-control" placeholder="Number of Qualified Shares"/>'

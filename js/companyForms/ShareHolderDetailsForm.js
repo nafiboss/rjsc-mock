@@ -104,6 +104,7 @@ class ShareHolderDetailsForm extends BaseForm {
           );
       self._reloadShareHolderTable();
       self._getElementByClass('personDetailsModal').modal('hide');
+      $('.modal').modal('hide');
       $('.shareHolderTypeSelect').val("0");
 
       self._getElementByClass('nid-passport').hide();
@@ -117,6 +118,7 @@ class ShareHolderDetailsForm extends BaseForm {
 
     $(document).on('click', '.modalCloseBtn', function(){
       self._getElementByClass('personDetailsModal').modal('hide');
+      $('.modal').modal('hide');
     });
 
     $(document).on('click', '.removeShareHolderItemBtn', function(){
