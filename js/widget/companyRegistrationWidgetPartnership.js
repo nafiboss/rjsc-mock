@@ -56,6 +56,11 @@ $.widget("obrs.companyRegistrationWidget", {
                         "code":"BUSINESS_OBJECT_FORM",
                         "header":"a.3 Business Object",
                         "question": "What would be your company name?"
+                    },
+                    {
+                        "code":"BUSINESS_DETAILS_FORM",
+                        "header":"a.4 Business Details",
+                        "question": "What would be your company name?"
                     }
                 ]
             },
@@ -167,11 +172,11 @@ $.widget("obrs.companyRegistrationWidget", {
                 self.data.masterData.moaSectionList
             );
         }else if(stepObject.code === 'BUSINESS_DETAILS_FORM'){
-            return new BusinessDetailsForm(parentObject.header, stepObject.header);
+            return new BusinessDetailsFormPartnership(parentObject.header, stepObject.header);
         }else if(stepObject.code === 'QUALIFIED_SHARES_FORM'){
             return new QualifiedSharesForm(stepObject.header, stepObject.header);
         }else if(stepObject.code === 'SHARE_HOLDER_FORM'){
-            return new ShareHolderDetailsForm(stepObject.header, stepObject.header,
+            return new ShareHolderDetailsFormPartnership(stepObject.header, stepObject.header,
                 [/*
                     {"id": 1, "name":"A", "type":"LOCAL INDIVIDUAL", "noOfShare": 15},
                     {"id": 2, "name":"B", "type":"LOCAL CORPORATE", "noOfShare": 10},
