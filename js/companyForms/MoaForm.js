@@ -133,7 +133,7 @@ class MoaForm extends BaseForm {
         + '      <div class="py-4 px-120 shadow bg-white preApprovedMoaWrapperDiv" style="display: none;">'
         + '         <div class="col-md-6 offset-md-3">'
         + '             <div class="d-flex flex-column mb-4">'
-        + '                 <label class="form-label font-label">Upload Pre approved AOA <span class="red">*</span></label>'
+        + '                 <label class="form-label font-label">Upload Pre approved MOA <span class="red">*</span></label>'
         + '                 <input type="file" class="form-control preApprovedMoaFile" placeholder="Upload your pre approved Moa ">'
         + '             </div>'
         + '         </div>'
