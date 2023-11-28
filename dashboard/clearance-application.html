@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/common.css"/>
     <link rel="stylesheet" href="../css/dashboard.css"/>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 <div class="container-fluid bg-white">
@@ -391,6 +392,29 @@
                             </div>
                         </div>
                         <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="d-flex flex-column gap-3">
+                                  <span class="d-flex gap-1">
+                                    <span class="d-flex font-label">Enter mobile no of one of the director, this will be validated on the time of Entity registration application</span>
+                                    <span class="list-png">
+                                      <i
+                                              class="fa-solid fa-asterisk fa-2xs"
+                                              style="color: #dc3545"
+                                      ></i>
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <input
+                                            type="email"
+                                            class="form-control plc"
+                                            aria-describedby="emailHelp"
+                                            placeholder="01********"
+                                    />
+                                  </span>
+                                </span>
+                            </div>
+                        </div>
                         <div class="row" style="display: none;" id="review">
                             <div class="col-md-12">
                                 <div class="d-flex flex-column mb-4" >
@@ -520,7 +544,7 @@
         }
 
         $('#submitApplication').on('click', function() {
-            window.location.pathname = "/mock-html/src/dashboard/name-clear-invoice.html";
+            window.location.pathname = window.urlPathPrefix + "/dashboard/name-clear-invoice.html";
         });
     });
 </script>

@@ -514,9 +514,8 @@
             url.searchParams.append('params', 'clear');
         } else {
             $('#availability').removeClass("text-success").addClass("text-danger");
-            $('#availability').text("Name not available, but you can still apply for review");
-            $('#nameClearanceApplication').text("Apply for name review");
-            url.searchParams.append('params', 'review');
+            $('#availability').text("Name not available, Please try with a new name");
+            $('#nameClearanceApplication').hide();
         }
       });
 
