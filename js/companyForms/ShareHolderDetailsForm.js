@@ -235,11 +235,6 @@ class ShareHolderDetailsForm extends BaseForm {
         + '</div>'
         + '<div class="modal-body p-4" style="height: 700px; overflow-y: scroll;">'
         + '<div class="shareHolderWrapper p-3">'
-
-        + '<div class="d-flex gray-bg p-2 w-100 justify-content-between">'
-        + '   <span class="all-label">Applicant Type</span>'
-        + '</div>'
-
         + '    <div class="row p-4">'
         + '         <div class="col-md-12">'
         + '             <div class="col-md-6 d-flex flex-column mb-4">'

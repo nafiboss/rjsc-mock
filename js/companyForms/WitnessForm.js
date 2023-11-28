@@ -176,13 +176,7 @@ class WitnessForm extends BaseForm {
     bindEvents() {
         var self = this;
 
-        ClassicEditor.create(document.querySelector(".editor"))
-            .then((editor) => {
-                console.log(editor);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        
 
         $(document).on('click', '.aoaClauseEditBtn', function () {
             $(this)

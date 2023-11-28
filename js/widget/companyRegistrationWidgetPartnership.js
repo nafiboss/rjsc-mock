@@ -72,6 +72,13 @@ $.widget("obrs.companyRegistrationWidget", {
                 "itemList": []
             },
             {
+                "code": "UPLOAD_DOCUMENT",
+                "header": "Upload Documents",
+                "subHeader": "",
+                "question": "What's you entity type?",
+                "itemList": []
+            },
+            {
                 "code": "WITNESS_FORM",
                 "header": "Witness",
                 "subHeader": "",
@@ -205,9 +212,10 @@ $.widget("obrs.companyRegistrationWidget", {
             return new WitnessForm(stepObject.header, stepObject.header);
         }else if(stepObject.code === 'PREVIEW_FORM'){
             return new PreviewForm(stepObject.header, stepObject.header);
-        }
-        else if(stepObject.code === 'BUSINESS_COMMENCEMENT_BUSINESS_FORM'){
+        }else if(stepObject.code === 'BUSINESS_COMMENCEMENT_BUSINESS_FORM'){
             return new BusinessDetailsPublic(stepObject.header, stepObject.header);
+        }else if(stepObject.code === 'UPLOAD_DOCUMENT'){
+            return new UploadDocumentForm(stepObject.header, stepObject.header, [], self.options.message.dataTableConfig, self.data.masterData.moaSectionList);
         }
     },
     createRightPanel: function(){

@@ -1,4 +1,4 @@
-class NomineeForm extends BaseForm {
+class ShareHolderDetailsFormPartnership extends BaseForm {
     header = '';
     subHeader = '';
     shareholderCounter = 1;
@@ -38,7 +38,7 @@ class NomineeForm extends BaseForm {
   
       html +='     <div class="row p-4">'
           + '         <div class="d-flex justify-content-end pb-5 mr-2">'
-          + '           <button type="button" class="btn btn-outline-success '+ this.addShareHolderBtnClassName +'"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Add Nominee</button>'
+          + '           <button type="button" class="btn btn-outline-success '+ this.addShareHolderBtnClassName +'"><i class="fa fa-plus-circle"></i>&nbsp;&nbsp;Add Shareholder</button>'
           + '         </div>'
           + '         <div class="col-md-12">'
           + '             <div class="d-flex flex-column mb-4 nomineeListWrapperDiv">'
@@ -227,7 +227,7 @@ class NomineeForm extends BaseForm {
           + '<button type="button" class="close modal-btn modalCloseBtn" data-dismiss="modal" aria-label="Close">'
           + '<span aria-hidden="true">&times;</span>'
           + '</button>'
-          + '<h5 class="bold">Particulars of Nominee</h5>'
+          + '<h5 class="bold">Particulars of Shareholder</h5>'
           + '</div>'
           + '</div>'
           + '<div class="modal-body p-4" style="height: 700px; overflow-y: scroll;">'
@@ -235,7 +235,7 @@ class NomineeForm extends BaseForm {
           + '    <div class="row p-4">'
           + '         <div class="col-md-12">'
           + '             <div class="col-md-6 d-flex flex-column mb-4">'
-          + '                 <label class="form-label font-label">Nominee Type <span class="red">*</span></label>'
+          + '                 <label class="form-label font-label">Shareholder Type <span class="red">*</span></label>'
           +                   Obrs.APP.getCommonSelectBox(this.shareHolderTypeList, 'shareHolderTypeSelect', '')
           // + '                 <div class="btn-group" role = "group">'
           // + '                    <button type="button" class="btn btn-sm btn-outline-primary btnGroup shareHolderTypeBtn" data-remove-class="btn-outline-primary" data-add-class="btn-primary">Individual</button>'
@@ -540,7 +540,7 @@ class NomineeForm extends BaseForm {
           + '</div>'
           + '<div class="modal-footer">'
           + '<button type="button" class="btn btn-outline-danger modalCloseBtn" data-dismiss="modal">Close</button>'
-          + '<button type="button" class="btn btn-primary '+ this.confirmShareHolderBtnClassName +'">Add nominee</button>'
+          + '<button type="button" class="btn btn-primary '+ this.confirmShareHolderBtnClassName +'">Add Shareholder</button>'
           + '</div>'
           + '</div>'
           + '</div>'
@@ -560,6 +560,8 @@ class NomineeForm extends BaseForm {
         html += '<th>Sl#</th>';
         html += '<th>Name</th>';
         html += '<th>Type</th>';
+        html += '<th>Capital Contributed (if any)</th>';
+        html += '<th>Share of Profit (%)</th>';
         html += '<th></th>';
         html += '</tr>';
         html += '</thead>';
@@ -571,6 +573,8 @@ class NomineeForm extends BaseForm {
           html += '<td>'+ ( idx + 1 ) +'</td>';
           html += '<td>'+ item.name +'</td>';
           html += '<td>'+ item.type +'</td>';
+          html += '<td><input type="text" class="form-control plc"/></td>';
+          html += '<td><input type="text" class="form-control plc"/></td>';
           html += '<td>';
           html += '<button class="btn btn-sm btn-outline-success"><i class="fa fa-list me-1" data-id="'+ item.id +'"></i>View</button>';
           html += '<button class="btn btn-sm btn-outline-primary ms-1"><i class="fa fa-edit me-1" data-id="'+ item.id +'"></i>Edit</button>';
@@ -582,7 +586,7 @@ class NomineeForm extends BaseForm {
         html += '</thody>';
         html += '</table>';
       }else{
-        html += '<div class="emptyListMsgDiv">No Nominee added.</div>';
+        html += '<div class="emptyListMsgDiv">No Share holder added.</div>';
       }
       return html;
     }
