@@ -308,8 +308,7 @@
           if($($('.carousel-item.active .companyRegistrationForm .reg-form-input')[0]).val().includes("nafi")) {
             $(this).parent().append("<div id='availability' class='remove font-label text-success fw-bold'><br> <i class='fa-solid fa-check' style='color: #198754'></i> Well Done, Perfect Name.</div>");
           } else {
-            $(this).parent().append("<div id='availability' class='remove font-label text-danger fw-bold'> <br> <i class='fa-solid fa-close' style='color: red'></i> Name not available, but you can still apply for review</div>");
-            $(this).parent().append("<div class='remove'> <br><a href='../dashboard/clearance-application.html?params=review' class='btn btn-primary w-100 font-label'>Apply for review</a></div>");
+            $(this).parent().append("<div id='availability' class='remove font-label text-danger fw-bold'> <br> <i class='fa-solid fa-close' style='color: red'></i> Name not available, Try with a different name</div>");
           }
         });
     });
