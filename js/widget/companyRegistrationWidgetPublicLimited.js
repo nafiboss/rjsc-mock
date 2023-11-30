@@ -132,6 +132,15 @@ $.widget("obrs.companyRegistrationWidget", {
             self.el.stepProgressRightPart.html(self.createRightPanel());
             self.uiEventInitialization();
             self.setContentMaxHeight();
+
+            $('.entityType').val("9");
+            $('.moaLiabilitySelect').find('option')
+            .remove()
+            .end()
+            .append('<option val="0">-- Choose Any --</option><option value="11">Limited by share</option><option>Limited by Guarantee</option><option>Unlimited</option>');
+            $("div[data-code='BUSINESS_COMMENCEMENT_BUSINESS_FORM']").parent().addClass('d-flex').show();
+            Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = "9";
+            $('.qualified-share').show();
         });
     },
     _init: function () {

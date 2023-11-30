@@ -126,6 +126,11 @@ $.widget("obrs.companyRegistrationWidget", {
             self.el.stepProgressRightPart.html(self.createRightPanel());
             self.uiEventInitialization();
             self.setContentMaxHeight();
+
+            $('.entityType').val("7");
+            $('.moaLiabilitySelect').val('11');
+            Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = "7";
+            $('.qualified-share').hide();
         });
     },
     _init: function () {

@@ -283,7 +283,7 @@
                     $(document).find('.carousel').carousel('next');
                 }, 700);
             }
-
+        
             $('.entityType').val("9");
             $('.moaLiabilitySelect').find('option')
             .remove()
@@ -293,6 +293,8 @@
             Obrs.APP.SELECTED_VALUES.SELECTED_ENTITY_TYPE = "9";
             $('.qualified-share').show();
         });
+
+        
 
         $(document).on('click', '.nextBtn', function(){
             console.log($('.carousel-item.active').data('formCode'));
