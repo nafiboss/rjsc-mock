@@ -161,9 +161,9 @@
                             />
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="country" style="display: none;">
                         <div class="mb-3 col ">
-                            <div class="passport-common">
+                            <div class="passport-common" >
                                 <label class="form-label font-label passport-common" style="">Country</label>
                                 <select class="form-control passport-common country" name="countryId" id="country" style="">
                                     <option value="">-- Select Any --</option>
@@ -229,6 +229,7 @@
       $('#passport-scan').hide();  
       $('#local').on('click', function() {
         $('#passport-scan').hide();
+        $('#country').hide();
         $('#nid-passport').text('NID Number');
         $('#nid').text('Please provide a valid NID number');
       });
@@ -237,6 +238,7 @@
         $('#nid-passport').text('Passport Number');
         $('#nid').text('Please provide a valid Passport number');
         $('#passport-scan').show();    
+        $('#country').show();
       });
     });
 </script>
